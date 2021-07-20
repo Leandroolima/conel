@@ -1,0 +1,11 @@
+{
+    "env":{ 
+        "MYSQL_USER": "root",
+        "MYSQL_PASSWORD": "kuro",
+        "MYSQL_DATABASE": "conel",
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": 3306,
+        "JWT_KEY": "Hashira",
+        "URL_API": "http://localhots:3000/"
+    }
+}
