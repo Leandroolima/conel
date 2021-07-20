@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'exo_2black';
+    src: url('../fontes/exo2-black-webfont.woff2') format('woff2'),
+         url('../fontes/exo2-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'exo_2light';
+    src: url('../fontes/exo2-light-webfont.woff2') format('woff2'),
+         url('../fontes/exo2-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
