@@ -1,0 +1,259 @@
+@media only screen and (min-width: 768px) {
+    *{
+        margin: 0;
+    }
+    @font-face {
+        font-family: 'robotoregular';
+        src: url('../fontes/roboto-regular-webfont.woff2') format('woff2'),
+             url('../fontes/roboto-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      
+      }
+    @font-face {
+    font-family: 'exo_2light';
+    src: url('../fontes/exo2-light-webfont.woff2') format('woff2'),
+         url('../fontes/exo2-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }  
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+      
+      
+        .row-1 {width: 100%; display: flex;flex-direction: row;}
+
+        .principal{
+            width: 1349px;
+            margin: auto;
+        }
+        .inicio{
+            background-color: #2093D6;
+        }
+        .home{
+            list-style-type: none;
+            overflow: hidden;
+        }
+        ul{
+            overflow: hidden;
+            list-style-type: none;
+          }
+        .home li {
+            float: left;
+            font-family: 'robotoregular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 23px;
+            display: block;
+            text-align: center;
+            margin-left: 105px;
+            margin-top: 28px;
+          }
+        .home li a {
+            text-decoration: none;
+            color: #F2EDED;
+        }
+    .logo{
+        margin-left: 65px;
+        margin-top: 12px;
+    }
+    .barra{
+        background-color: #00578A ; 
+    }
+    .barra li{
+        float: left;
+        font-family: 'robotoregular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 23px;
+        display: block;
+        text-align: center;
+        margin-bottom: 4px;
+        margin-top: 18px;
+    }
+    .barra li a{
+        text-decoration: none;
+        color: #F2EDED;
+    }
+    .cor-menu{
+        background-color: #2093D6
+    }
+    .cor-menu2{
+        background-color: #00578A
+    }
+    #links5{
+        margin-left: 150px;
+        margin-right: -166px;
+    }
+    #links4{
+        margin-left: 161px;
+        margin-right: -149px;
+    }
+    #links3{
+        margin-left: 92px;
+    }
+    #links2{
+        margin-left: 65px;
+    }
+    #links1{
+        margin-left: 27px;
+    }
+    #pesquisa1{
+        margin-left: 71px;
+    }
+    #pesquisa2{
+        margin-left: 28px;
+    }
+    #pesquisa3{
+        margin-left: 31px;
+    }
+    .barra-pesquisa{
+        margin-left: 793px;
+        margin-top: 23px;
+    }
+    #pesquisar{
+        background: #C4C4C4;
+        background-image: url(../img/search.png);
+        border-radius: 30px;
+        border-style: none;
+        width: 190px;
+        height: 34px;
+        background-size: 28px;
+        background-repeat: no-repeat;
+        background-position: right;
+        outline: 0;
+    }
+    ::placeholder {
+        color: black;
+        margin-left: 30px;
+       }
+    .maos{
+        background-image: url(../img/business-people-handshake-on-city\ 1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #texto{
+        font-family: 'exo_2light';
+        font-weight: bold;
+        font-size: 72px;
+        margin-top: 62px;
+        margin-left: 72px;
+        line-height: 86px;
+        margin-bottom: 62px;
+        color: #fff;
+        text-shadow: 1px 0 0 black, 1px 0 0 black, 0 1px 0 black, 0 1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;;
+    }
+    .laneInput{
+        display: grid;
+    }
+    .inlaneInput{
+        display: inline;
+    }
+    .card{
+        background-color: #fff;
+        margin-top: 150px;
+        border-radius: 5px;
+        margin-left: 120px;
+    }
+    #razao_social{
+        outline: 0;
+        background: #C4C4C4;
+        border-style: none;
+        width: 1182px;
+        height: 34px;
+    }
+    #cadastro-informacoes{
+        font-family: 'exo_2light';
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        color: #00578A;
+        margin-bottom: 32px;
+        margin-top: 32px;
+    }
+    #cnpj{
+        outline: 0;
+        background: #C4C4C4;
+        border-style: none;
+        width: 476px;
+        height: 34px;
+    }
+    #endereco{
+        outline: 0;
+        background: #C4C4C4;
+        border-style: none;
+        width: 1182px;
+        height: 34px;
+    }
+    #cidade{
+        outline: 0;
+        background: #C4C4C4;
+        border-style: none;
+        width: 573px;
+        height: 34px;
+    }
+    #bairro{
+        outline: 0;
+        background: #C4C4C4;
+        border-style: none;
+        width: 492px;
+        height: 34px;
+    }
+    #estado{
+        outline: 0;
+        background: #C4C4C4;
+        border-style: none;
+        width: 215px;
+        height: 34px;
+    }
+    #cep{
+        outline: 0;
+        background: #C4C4C4;
+        border-style: none;
+        width: 215px;
+        height: 34px;
+    }
+    #telefone1{
+        outline: 0;
+        background: #C4C4C4;
+        border-style: none;
+        width: 287px;
+        height: 34px;
+    }
+    #telefone2{
+        outline: 0;
+        background: #C4C4C4;
+        border-style: none;
+        width: 287px;
+        height: 34px;
+    }
+    #email{
+        outline: 0;
+        background: #C4C4C4;
+        border-style: none;
+        width: 726px;
+        height: 34px;
+    }
+    #inscricao_estadual{
+        outline: 0;
+        background: #C4C4C4;
+        border-style: none;
+        width: 422px;
+        height: 34px;
+    }
+
+
+}
