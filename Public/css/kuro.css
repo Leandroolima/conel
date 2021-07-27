@@ -577,6 +577,12 @@ NOSSA POLÍTICA */
     line-height: 86px;
     color: #FFFFFF;
 }
+.imgrover{
+    width: 244px;
+}
+.imgrover:hover{
+    width: 260px;
+}
 
 
 
