@@ -587,12 +587,107 @@ NOSSA POLÍTICA */
     line-height: 86px;
     color: #FFFFFF;
 }
+
+
+
+
+
+/* FIQUE POR DENTRO */
+
+.PFPDimg{
+    width: 100%;
+    height: 295px;
+    opacity: 100%;
+    background-image: url('../img/icon-internet-world-in-the-hands-of-a-businessman-network-technology-and-communication1.png');
+}
+#PFPDpimg{
+    
+    width: 676px;
+    height: 86px;
+    margin-top: 86px;
+    margin-left: 95px;
+    font-family: 'exo_2black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 86px;
+    color: #FFFFFF;
+
+}
+
+.O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS{
+    width: 522px;
+    height: 33px;
+    margin-left: 91px;
+    margin-top: 162px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27.6px;
+    line-height: 120%;
+    color: #000000;
+}
+.O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-fundo{
+    width: 1206px;
+    height: 316px;
+    margin-left: 80px;
+    margin-top: 17px;
+    background: #f3960b59;
+    
+    border-radius: 30px;
+  
+}
+.O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-img{
+    width: 665px;
+height: 316px;
+left: 91px;
+top: 698px;
+border-radius: 30px;
+background-image: url('../img/45273_luzparatodos2.png');
+}
+
+
+
+#O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-button{
+    flex-direction: row;
+    padding: 10px 15px;
+    width: 106px;
+    height: 34px;
+    margin-top: 270px;
+    margin-right: 36px;
+    border: none;
+    background: #787070;
+    border-radius: 30px;
+    text-align: center;
+    float: right;
+}
+
+
+
+
+
+/* 
 .imgrover{
     width: 244px;
+ 
+  
 }
 .imgrover:hover{
-    width: 260px;
-}
+    width: 284px;
+    height: 230px;
+    margin-left:10px ;
+    padding-bottom: 10px;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: width 0.5s;
+} */
+
+
+
+
+
+
+
+
 
     #cadastro-informacoes-bairro{
         font-family: 'exo_2light';
