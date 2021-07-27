@@ -284,11 +284,55 @@
         width: 422px;
         height: 34px;
     }
-.imgpri{
-width: 100%;
-height: 455px;
-opacity: 100%;
-background-image: url('../img/power-lines-in-field-on-sunrise-background1.png');
+    #cadastro-informacoes-bairro{
+        font-family: 'exo_2light';
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #00578A;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    margin-left: 91px;
+    }
+    .telefone2{
+        margin-left: -218px;
+    }
+    .cep{
+        margin-left: -218px;
+    }
+    #arquivo{
+        background-image: url(../img/clip_1.png);
+        height: 36px;
+        width: 36px;
+        border-style: none;
+    }
+    .arquivo1{
+        margin-top: 32px;
+    }
+    input[type="file"] {
+        display: none;
+    }
+    .custom-file-upload {
+        border: 1px solid #ccc;
+        display: inline-block;
+        cursor: pointer;
+    }
+    #botao-cadastro{
+        background-color: #00578A;
+        border-style: none;
+        color: white;
+        margin-top: 18px;
+        border-radius: 5px;
+        width: 300px;
+        height: 34px;
+        cursor: pointer;
+        margin-bottom: 92px;
+    }
+    .imgpri{
+       width: 100%;
+       height: 455px;
+       opacity: 100%;
+       background-image: url('../img/power-lines-in-field-on-sunrise-background1.png');
 }
 
 #pImgpri{
@@ -587,38 +631,70 @@ NOSSA POLÍTICA */
     line-height: 86px;
     color: #FFFFFF;
 }
+.side-bar ul{
+    overflow: hidden;
+    list-style-type: none;
+}
+.side-bar li{
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    display: block;
+    text-align: center;
+    margin-bottom: 4px;
+    margin-top: 18px;
+}
+.side-bar li a{
+    text-decoration: none;
+    color: #F2EDED;
+}
+.side-bar{
+    margin-top: 74px;
+}
 
-    #cadastro-informacoes-bairro{
-        font-family: 'exo_2light';
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
-    color: #00578A;
-    margin-bottom: 32px;
-    margin-top: 32px;
+#links6{
+    margin-left: -234px;
+    margin-right: 220px;
+}
+#links7{
+    margin-left: -179px;
+    margin-right: 186px;
+}
+#links8{
+    margin-left: -164px;
+}
+#links9{
+    margin-left: -190px;
+}
+#links10{
+    margin-left: -186px;
+}
+
+#links12{
+    margin-left: -77px;
+    margin-right: 13px;
+}
+#links13{
+    margin-left: -40px;
+}
+#localizacao{
+    color: #F2EDED;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    display: block;
+    text-align: center;
+    margin-bottom: 4px;
+    margin-top: 69px;
     margin-left: 91px;
-    }
-    .telefone2{
-        margin-left: -218px;
-    }
-    .cep{
-        margin-left: -218px;
-    }
-    #arquivo{
-        background-image: url(../img/clip_1.png);
-        height: 36px;
-        width: 36px;
-        border-style: none;
-    }
-    .arquivo1{
-        margin-top: 32px;
-    }
-    input[type="file"] {
-        display: none;
-    }
-    .custom-file-upload {
-        border: 1px solid #ccc;
-        display: inline-block;
-        cursor: pointer;
-    }
+}
+#cor-final{
+    background-color: #2093D6;
+    margin-top: 100px;
+}
+
 }
