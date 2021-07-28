@@ -318,7 +318,7 @@
         cursor: pointer;
     }
     #botao-cadastro{
-        background-color: #00578A;
+        background-color: #DFDD26;
         border-style: none;
         color: white;
         margin-top: 18px;
@@ -655,9 +655,6 @@ NOSSA POLÍTICA */
 }
 
 
-
-
-
 /* FIQUE POR DENTRO */
 
 .PFPDimg{
@@ -918,5 +915,114 @@ background-image: url('../img/light-bulb-lit-between-many-lightsIMGGRANDE.png');
     background-color: #2093D6;
     margin-top: 100px;
 }
+.foto-de-entrada{
+    background-image: url(../img/businessman-hand-holding-smart-phone-with-icon-mobile-phone-mail-telephone-and-address-customer-service-call-center-contact-us-concept1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#texto-2{
+    font-family: 'exo_2light';
+    font-weight: bold;
+    font-size: 72px;
+    margin-top: 89px;
+    margin-left: 72px;
+    line-height: 86px;
+    margin-bottom: 121px;
+    color: #fff;
+    text-shadow: 1px 0 0 black, 1px 0 0 black, 0 1px 0 black, 0 1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+.barra-azul{
+    background: #00578A;
+    border-radius: 50px;
+    width: 285px;
+    height: 74px;
+    margin-left: 53px;
+    margin-right: -62px;
+    margin-top: 73px;
 
+}
+#texto-barra-azul{
+    font-family: 'exo_2light';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    margin-left: 30px;
+    color: #FFFFFF;
+    margin-top: 13px;
+    display: inline-block;
+}
+.barra-verde{
+    background: #B8B616;
+    margin-left: -224px;
+    margin-top: 73px;
+    z-index: -1;
+    width: 559px;
+    height: 159px;
+    border-radius: 50px;
+    margin-bottom: 300px;
+}
+#texto-barra-verde{
+    font-family: 'exo_2light';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    color: #FFFFFF;
+    margin-left: 30px;
+    margin-top: 95px;
+}
+.foto-de-entrada-trabalhe{
+    background-image: url(../img/close-up-photography-of-light-bulb1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.barrinha{
+    background: #006EAF;
+    border-radius: 30px;
+    width: 331px;
+    height: 52px;
+    margin-top: 132px;
+    margin-left: 154px;
+    margin-bottom: 28px;
+}
+.texto-barrinha{
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 14px;
+}
+#conte_mais{
+    width: 1139px;
+    height: 641px;
+    background: #F2EDED;
+    border-style: none;
+    margin-left: 159px;
+    outline: 0;
+}
+.enviar{
+    margin-left: 160px;
+}
+#botao-enviar-trabalhe{
+    color: black;
+    background-color: #DFDD26;
+    border-style: none;
+    margin-top: 33px;
+    border-radius: 5px;
+    width: 236px;
+    height: 56px;
+    cursor: pointer;
+    margin-left: 312px;
+    margin-bottom: 92px;
+}
+.foto-de-entrada-denuncia{
+    background-image: url(../img/business-people-fill-resume-application-information-desk-presents-ability-company-agree-with-position-job1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 }
