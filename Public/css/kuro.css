@@ -706,8 +706,6 @@ NOSSA POLÍTICA */
 .O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-img{
     width: 665px;
 height: 316px;
-left: 91px;
-top: 698px;
 border-radius: 30px;
 background-image: url('../img/45273_luzparatodos2.png');
 }
@@ -727,6 +725,147 @@ background-image: url('../img/45273_luzparatodos2.png');
     text-align: center;
     float: right;
 }
+
+.COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS{
+  
+    height: 33px;
+    margin-left: 91px;
+    margin-top: 198px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27.6px;
+    line-height: 120%;
+    color: #000000;
+}
+.COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-fundo{
+    width: 1206px;
+    height: 316px;
+    margin-left: 80px;
+    margin-top: 17px;
+    margin-left: 72px;
+    background: #2093d64d;
+    border-radius: 30px;
+}
+.COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-img{
+    width: 665px;
+height: 316px;
+border-radius: 30px;
+background-image: url('../img/338032.png');
+}
+#COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-button{
+    padding: 10px 15px;
+    width: 106px;
+    height: 34px;
+    margin-top: 272px;
+    margin-left: 40px;
+    border: none;
+    background: #787070;
+    border-radius: 30px;
+    text-align: center;
+    float: left;
+}
+
+
+.A-INVEÇÃO-DA-LÂMPADA-ELÉTRICA-INCANDESCENTE{
+    height: 33px;
+    margin-left: 91px;
+    margin-top: 198px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27.6px;
+    line-height: 120%;
+    color: #000000;
+}
+.A-INVEÇÃO-DA-LÂMPADA-ELÉTRICA-INCANDESCENTE-fundo{
+    width: 1206px;
+    height: 316px;
+    margin-left: 80px;
+    margin-top: 17px;
+    margin-bottom: 100px;
+    background: #15cf1152;
+    border-radius: 30px;
+}
+.A-INVEÇÃO-DA-LÂMPADA-ELÉTRICA-INCANDESCENTE-img{
+    width: 665px;
+height: 316px;
+border-radius: 30px;
+background-image: url('../img/light-bulb-lit-between-many-lightsIMGGRANDE.png');
+}
+
+
+
+
+/* RELAÇÕES COM FORNECEDORES */
+
+.RELAÇÕES-COM-FORNECEDORES{
+    width: 100%;
+    height: 295px;
+    opacity: 100%;
+    background-image: url('../img/businessman-hand-holding-wooden-building-blocks1.png');
+}
+
+#RELAÇÕES-COM-FORNECEDORES-span{
+    height: 174px;
+    display: inline-block;
+    margin-top: 93px;
+    margin-left: 75px;
+    font-family: 'exo_2light';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 86px;
+    color: #FFFFFF;
+}
+.RELAÇÕES-COM-FORNECEDORES-img{
+    width: 100%;
+    height: 380px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 203px;
+    background-image: url('../img/multiracial-business-handshake-as-concept-of-help-support-in-teamwork1.png');
+    }
+
+ .RELAÇÕES-COM-FORNECEDORES-bloco{
+    width: 1225px;
+    height: 433px;
+    margin-left: 65px;
+    margin-right: 65px;
+    margin-top: 141px;
+    margin-bottom: 722px;
+    background: #00578A;
+    border-radius: 30px;
+    }
+ #RELAÇÕES-COM-FORNECEDORES-texto{
+    width: 1000px;
+    height: 120px;
+    margin-left: 100px;
+    margin-top: 60px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;;
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     #cadastro-informacoes-bairro{
         font-family: 'exo_2light';
