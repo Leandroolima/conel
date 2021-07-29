@@ -848,6 +848,7 @@ background-image: url('../img/light-bulb-lit-between-many-lightsIMGGRANDE.png');
     
     }
 
+<<<<<<< HEAD
 
 
     /* COMO A ENERGIA ELÉTRICA CHEGA EM NOSSAS CASAS */
@@ -1179,6 +1180,8 @@ border-radius: 50px;
 
 
 
+=======
+>>>>>>> af6359370205509cb7e5f43ff2ceedb6dff8791c
     #cadastro-informacoes-bairro{
         font-family: 'exo_2light';
     font-weight: normal;
@@ -1205,7 +1208,9 @@ border-radius: 50px;
 #links10{
     margin-left: -186px;
 }
-
+#links11{
+    color: #F2EDED;
+}
 #links12{
     margin-left: -77px;
     margin-right: 13px;
@@ -1334,10 +1339,108 @@ border-radius: 50px;
     cursor: pointer;
     margin-left: 312px;
     margin-bottom: 92px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
 }
 .foto-de-entrada-denuncia{
     background-image: url(../img/business-people-fill-resume-application-information-desk-presents-ability-company-agree-with-position-job1.png);
     background-repeat: no-repeat;
     background-position: center;
+}
+.barrinha-verde{
+    background: #DFDD26;
+    border-radius: 30px;
+    width: 236px;
+    height: 56px;
+    margin-top: 108px;
+    margin-left: 154px;
+    margin-bottom: 28px;
+}
+.preta{
+    color: black;
+    margin-left: 38px;
+}
+.explicacao-denuncia{
+    background-color: #00578A;
+    width: 1105px;
+    height: 196px;
+    margin-left: 155px;
+}
+#texto-denuncia{
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 44px;
+    margin-left: 40px;
+    margin-bottom: 55px;
+    color: #FFFFFF;
+    display: inline-block;
+}
+.como-funciona{
+    color: black;
+    margin-left: 38px;
+
+}
+.barrinha-verde-2{
+    background: #DFDD26;
+    border-radius: 30px;
+    width: 531px;
+    height: 56px;
+    margin-top: 81px;
+    margin-left: 154px;
+    margin-bottom: 28px;
+}
+.bordas-imagens{
+    width: 297px;
+    height: 293px;
+    background: #DFDD26;
+    border-radius: 30px;
+    margin-left: -224px;
+    margin-top: 312px;
+    z-index: -1;
+}
+.imagens-denuncia{
+    margin-left: 152px;
+    margin-top: 60px;
+}
+.imagens-denuncia:hover{
+    transform: translateY(0) scale(1.2);
+}
+.detalhe{
+    margin-left: 102px;
+}
+.detalhe1{
+    margin-left: 58px;
+}
+.texto-bordas{
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 125px;
+    width: 286px;
+}
+.contato{
+    background-color: #DFDD26;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 153px;
+    display: inline-block;
+}
+.contato:hover{
+    background-color: #777504;
+}
+.botao-contato{
+    margin-top: 133px;
+    margin-bottom: 45px;
 }
 }
