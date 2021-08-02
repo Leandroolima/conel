@@ -39,12 +39,20 @@ app.get('/o_que_fazemos', (req, res) => {
     res.sendFile(__dirname + '/public/paginas/o_que_fazemos.html');
 })
 
-app.get('/fique_por_dentro', (req,res) => {
+app.get('/fique_por_dentro', (req, res) => {
     res.sendFile(__dirname + '/public/paginas/fique_por_dentro.html');
 })
 
-app.get('/fornecedores', (req,res) => {
+app.get('/fornecedores', (req, res) => {
     res.sendFile(__dirname + '/public/paginas/relacoes_com_fornecedores.html');
+})
+
+app.get('/saude_trabalho', (req, res) => {
+    res.sendFile(__dirname + '/public/paginas/saude_trabalho.html');
+})
+
+app.get('/LPT', (req,res) => {
+    res.sendFile(__dirname + '/public/paginas/conel_LPT.html');
 })
 
 app.use('/denuncia', rotaDenuncia);

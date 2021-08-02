@@ -1,3 +1,5 @@
+
+
 class Cadastro {
 
     constructor() {
@@ -251,3 +253,88 @@ class Trabalhe {
 }
 
 var trabalhe = new Trabalhe
+
+
+function fMasc(objeto,mascara) {
+    obj=objeto
+    masc=mascara
+    setTimeout("fMascEx()",1)
+}
+function fMascEx() {
+    obj.value=masc(obj.value)
+}
+function mTel(tel) {
+    tel=tel.replace(/\D/g,"")
+    tel=tel.replace(/^(\d)/,"($1")
+    tel=tel.replace(/(.{3})(\d)/,"$1)$2")
+    if(tel.length == 9) {
+        tel=tel.replace(/(.{1})$/,"-$1")
+    } else if (tel.length == 10) {
+        tel=tel.replace(/(.{2})$/,"-$1")
+    } else if (tel.length == 11) {
+        tel=tel.replace(/(.{3})$/,"-$1")
+    } else if (tel.length == 12) {
+        tel=tel.replace(/(.{4})$/,"-$1")
+    } else if (tel.length > 12) {
+        tel=tel.replace(/(.{4})$/,"-$1")
+    }
+    return tel;
+}
+function mCNPJ(cnpj){
+    cnpj=cnpj.replace(/\D/g,"")
+    cnpj=cnpj.replace(/^(\d{2})(\d)/,"$1.$2")
+    cnpj=cnpj.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3")
+    cnpj=cnpj.replace(/\.(\d{3})(\d)/,".$1/$2")
+    cnpj=cnpj.replace(/(\d{4})(\d)/,"$1-$2")
+    return cnpj
+}
+
+function mCEP(cep){
+    cep=cep.replace(/\D/g,"")
+    cep=cep.replace(/^(\d{2})(\d)/,"$1.$2")
+    cep=cep.replace(/\.(\d{3})(\d)/,".$1-$2")
+    return cep
+}
+function mNum(num){
+    num=num.replace(/\D/g,"")
+    return num
+}
+
+const options = {
+    method: "GET",
+    mode: "cors",
+    caches: "default"
+}
+
+
+function completar() {
+    const cep = document.getElementById("cep")
+   // let Cep = document.getElementById("cep").value;
+  //  console.log(Cep)
+    let search = cep.value.replace("-", "")
+    search = search.replace(".", "")
+    fetch(`https://viacep.com.br/ws/${search}/json/`, options).then((response) => {
+        response.json().then(data => {
+            console.log(data)
+            document.getElementById("bairro").value = data.bairro;
+            document.getElementById("cidade").value = data.localidade;
+            document.getElementById("endereco").value = data.logradouro;
+            document.getElementById("estado").value = data.uf;
+
+        })
+    })
+}
+
+function enviar() {
+    let bairro = document.getElementById("bairro").value;
+    let localidade = document.getElementById("cidade").value;
+    let logradouro = document.getElementById("endereco").value;
+    let uf = document.getElementById("estado").value;
+    let json = {
+        "bairro": bairro,
+        "localidade": localidade,
+        "logradouro": logradouro,
+        "uf": uf,
+    }
+    console.log(json)
+}
