@@ -164,6 +164,7 @@
         background-image: url(../img/business-people-handshake-on-city1.png);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
     }
     #texto{
         font-family: 'exo_2light';
@@ -234,7 +235,6 @@
         width: 492px;
         height: 34px;
         margin-top: 32px;
-        margin-left: 91px;
     }
     #estado{
         outline: 0;
@@ -251,7 +251,6 @@
         width: 215px;
         height: 34px;
         margin-top: 32px;
-        margin-left: -218px;
     }
     #telefone1{
         outline: 0;
@@ -268,7 +267,6 @@
         width: 287px;
         height: 34px;
         margin-top: 32px;
-        margin-left: -218px;
     }
     #email{
         outline: 0;
@@ -294,11 +292,8 @@
     margin-top: 32px;
     margin-left: 91px;
     }
-    .telefone2{
-        margin-left: -218px;
-    }
-    .cep{
-        margin-left: -218px;
+    .bairro{
+        margin-left: -93px;
     }
     #arquivo{
         background-image: url(../img/clip_1.png);
@@ -1172,6 +1167,7 @@ opacity: 0.7;
 border-radius: 50px;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -1179,6 +1175,8 @@ border-radius: 50px;
 
 
 
+=======
+>>>>>>> master
     #cadastro-informacoes-bairro{
         font-family: 'exo_2light';
     font-weight: normal;
@@ -1236,6 +1234,7 @@ border-radius: 50px;
     background-image: url(../img/businessman-hand-holding-smart-phone-with-icon-mobile-phone-mail-telephone-and-address-customer-service-call-center-contact-us-concept1.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 #texto-2{
     font-family: 'exo_2light';
@@ -1293,6 +1292,7 @@ border-radius: 50px;
     background-image: url(../img/close-up-photography-of-light-bulb1.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 .barrinha{
     background: #006EAF;
@@ -1315,6 +1315,8 @@ border-radius: 50px;
     margin-left: 14px;
 }
 #conte_mais{
+    font-family: 'robotoregular';
+    font-size: 20px;
     width: 1139px;
     height: 641px;
     background: #F2EDED;
@@ -1346,6 +1348,7 @@ border-radius: 50px;
     background-image: url(../img/business-people-fill-resume-application-information-desk-presents-ability-company-agree-with-position-job1.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 .barrinha-verde{
     background: #DFDD26;
@@ -1439,5 +1442,71 @@ border-radius: 50px;
 .botao-contato{
     margin-top: 133px;
     margin-bottom: 45px;
+}
+.foto-de-entrada-trabalho{
+    background-image: url(../img/capaa1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.texto-3{
+    font-family: 'exo_2light';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    margin-top: 89px;
+    margin-left: 72px;
+    line-height: 86px;
+    margin-bottom: 121px;
+    color: #fff;
+}
+.bloco{
+    background: #00578A;
+    border-radius: 50px;
+    width: 1280px;
+    height: 1628px;
+}
+.texto-bloco{
+    font-family: 'exo_2light';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 58px;
+    color: #fff;
+    width: 801px;
+    margin-left: 55px;
+    margin-top: 50px;
+    display: inline-block;
+}
+.imagem{
+    margin-left: 35px;
+    margin-top: 112px;
+    margin-bottom: 82px;
+}
+.LPT{
+    background-image: url(../img/electric-pole-power-lines-and-wires-with-blue-sky1.png);
+}
+.apagar{
+    opacity: 0;
+}
+.bloco-2{
+    width: 1297px;
+    height: 1689px;
+    background: #00578A;
+    border-radius: 50px;
+    margin-left: 30px;
+    margin-top: 135px;
+}
+.texto-bloco-2{
+    font-family: 'exo_2light';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #fff;
+    width: 1146px;
+    margin-left: 55px;
+    margin-top: 50px;
+    display: inline-block;
 }
 }

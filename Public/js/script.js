@@ -1,3 +1,5 @@
+
+
 class Cadastro {
 
     constructor() {
@@ -101,7 +103,238 @@ class Cadastro {
     }
 }
 
-
-
-
 var cadastro = new Cadastro
+
+class Denuncia {
+    constructor() {
+        this.arrayDenuncia = [];
+        this.editId = null
+    }
+    salvar() {
+        let denuncia = this.lerDados();
+
+        if (this.validaCampos(denuncia)) {
+            if (this.editId == null) {
+                this.adicionar(denuncia)
+            } else {
+                console.log("chegou")
+                this.atualizar(this.editId, denuncia)
+            }
+
+        alert('denuncia realizado')
+        document.location.reload(true);
+        }
+    }
+
+    lerDados() {
+        let denuncia = {}
+
+        denuncia.id = 0;
+        denuncia.canal_denuncia = document.getElementById('conte_mais').value;
+        denuncia.arquivo = document.getElementById('arquivo').value
+        return denuncia;
+    }
+
+    async adicionar(denuncia) {
+
+        const formData = new FormData();
+        const fileField = document.querySelector('input[type="file"]');
+
+        formData.append('canal_denuncia', denuncia.canal_denuncia);
+        formData.append('arquivo', fileField.files[0]);
+
+        fetch('http://localhost:3000/denuncia', {
+            method: 'POST',
+            body: formData,
+
+        }).then(result => {
+            return result.json();
+        }).then(data => {
+
+            denuncia.canal_denuncia = data.cadastrado.canal_denuncia;
+            denuncia.arquivo = data.cadastrado.arquivo;
+
+            this.arrayDenuncia.push(denuncia);
+
+        });
+    }
+
+    validaCampos(denuncia) {
+        let msg = '';
+
+        if (denuncia.canal_denuncia == "") {
+            msg += '- Informe o nome do Produto'
+        }
+        if (denuncia.arquivo == "") {
+            msg += '- Informe o preco do Produto'
+        }
+        if (msg != '') {
+            alert(msg);
+            return false
+        }
+        return true;
+
+    }
+
+}
+
+var denuncia = new Denuncia
+
+class Trabalhe {
+    constructor() {
+        this.arrayTrabalhe = [];
+        this.editId = null
+    }
+    salvar() {
+        let trabalhe = this.lerDados();
+
+        if (this.validaCampos(trabalhe)) {
+            if (this.editId == null) {
+                this.adicionar(trabalhe)
+            } else {
+                console.log("chegou")
+                this.atualizar(this.editId, trabalhe)
+            }
+
+        alert('trabalhe realizado')
+        document.location.reload(true);
+        }
+    }
+
+    lerDados() {
+        let trabalhe = {}
+
+        trabalhe.id = 0;
+        trabalhe.conte_mais = document.getElementById('conte_mais').value;
+        trabalhe.arquivo = document.getElementById('arquivo').value
+        return trabalhe;
+    }
+
+    async adicionar(trabalhe) {
+
+        const formData = new FormData();
+        const fileField = document.querySelector('input[type="file"]');
+
+        formData.append('conte_mais', trabalhe.conte_mais);
+        formData.append('arquivo', fileField.files[0]);
+
+        fetch('http://localhost:3000/trabalhe', {
+            method: 'POST',
+            body: formData,
+
+        }).then(result => {
+            return result.json();
+        }).then(data => {
+
+            trabalhe.conte_mais = data.cadastrado.conte_mais;
+            trabalhe.arquivo = data.cadastrado.arquivo;
+
+            this.arrayTrabalhe.push(trabalhe);
+
+        });
+    }
+
+    validaCampos(trabalhe) {
+        let msg = '';
+
+        if (trabalhe.conte_mais == "") {
+            msg += '- Informe o nome do Produto'
+        }
+        if (trabalhe.arquivo == "") {
+            msg += '- Informe o preco do Produto'
+        }
+        if (msg != '') {
+            alert(msg);
+            return false
+        }
+        return true;
+
+    }
+}
+
+var trabalhe = new Trabalhe
+
+
+function fMasc(objeto,mascara) {
+    obj=objeto
+    masc=mascara
+    setTimeout("fMascEx()",1)
+}
+function fMascEx() {
+    obj.value=masc(obj.value)
+}
+function mTel(tel) {
+    tel=tel.replace(/\D/g,"")
+    tel=tel.replace(/^(\d)/,"($1")
+    tel=tel.replace(/(.{3})(\d)/,"$1)$2")
+    if(tel.length == 9) {
+        tel=tel.replace(/(.{1})$/,"-$1")
+    } else if (tel.length == 10) {
+        tel=tel.replace(/(.{2})$/,"-$1")
+    } else if (tel.length == 11) {
+        tel=tel.replace(/(.{3})$/,"-$1")
+    } else if (tel.length == 12) {
+        tel=tel.replace(/(.{4})$/,"-$1")
+    } else if (tel.length > 12) {
+        tel=tel.replace(/(.{4})$/,"-$1")
+    }
+    return tel;
+}
+function mCNPJ(cnpj){
+    cnpj=cnpj.replace(/\D/g,"")
+    cnpj=cnpj.replace(/^(\d{2})(\d)/,"$1.$2")
+    cnpj=cnpj.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3")
+    cnpj=cnpj.replace(/\.(\d{3})(\d)/,".$1/$2")
+    cnpj=cnpj.replace(/(\d{4})(\d)/,"$1-$2")
+    return cnpj
+}
+
+function mCEP(cep){
+    cep=cep.replace(/\D/g,"")
+    cep=cep.replace(/^(\d{2})(\d)/,"$1.$2")
+    cep=cep.replace(/\.(\d{3})(\d)/,".$1-$2")
+    return cep
+}
+function mNum(num){
+    num=num.replace(/\D/g,"")
+    return num
+}
+
+const options = {
+    method: "GET",
+    mode: "cors",
+    caches: "default"
+}
+
+
+function completar() {
+    const cep = document.getElementById("cep")
+   // let Cep = document.getElementById("cep").value;
+  //  console.log(Cep)
+    let search = cep.value.replace("-", "")
+    search = search.replace(".", "")
+    fetch(`https://viacep.com.br/ws/${search}/json/`, options).then((response) => {
+        response.json().then(data => {
+            console.log(data)
+            document.getElementById("bairro").value = data.bairro;
+            document.getElementById("cidade").value = data.localidade;
+            document.getElementById("endereco").value = data.logradouro;
+            document.getElementById("estado").value = data.uf;
+
+        })
+    })
+}
+
+function enviar() {
+    let bairro = document.getElementById("bairro").value;
+    let localidade = document.getElementById("cidade").value;
+    let logradouro = document.getElementById("endereco").value;
+    let uf = document.getElementById("estado").value;
+    let json = {
+        "bairro": bairro,
+        "localidade": localidade,
+        "logradouro": logradouro,
+        "uf": uf,
+    }
+    console.log(json)
+}
