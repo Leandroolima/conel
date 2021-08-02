@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>
-    <div class="row-1 maos">
+    <div class="row-1 maos ">
         <div class="principal">
             <div class="col-12">
                 <p id="texto">CADASTRO DE <br>
@@ -65,14 +65,14 @@
     </div>
     <div class="principal">
         <div class="row-1">
-            <div class="card">
+            <div class="card ">
                 <div class="laneInput">
                     <label id="cadastro-informacoes">Razão Social</label>
                     <input type="text" id="razao_social">
                 </div>
                 <div class="laneInput">
                     <label id="cadastro-informacoes">CNPJ</label>
-                    <input type="number" id="cnpj">
+                    <input type="text" id="cnpj" maxlength="18" placeholder="Insira o Cnpj" onkeydown="javascript: fMasc( this, mCNPJ );" name="cnpj">
                 </div>
                 <div class="laneInput">
                     <label id="cadastro-informacoes">ENDEREÇO</label>
@@ -84,20 +84,19 @@
                             <div class="col-6 inlaneInput">
                                 <div class="row-1">
                                     <div class="col-12">
-                                        <div class="col-6">
-                                            <label id="cadastro-informacoes">CIDADE</label>
+                                        <div class="col-6 cep">
+                                            <label id="cadastro-informacoes">CEP</label>
                                         </div>
                                         <div class="col-6">
-                                            <input type="text" id="cidade">
+                                            <input onblur="completar()" maxlength="10" type="text" id="cep" onkeydown="javascript: fMasc( this, mCEP );" name="cep">
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="col-6 inlaneInput">
                                 <div class="row-1">
                                     <div class="col-12">
-                                        <div class="col-6">
+                                        <div class="col-6 bairro">
                                             <label id="cadastro-informacoes-bairro">BAIRRO</label>
                                         </div>
                                         <div class="col-6">
@@ -128,11 +127,11 @@
                             <div class="col-6 inlaneInput">
                                 <div class="row-1">
                                     <div class="col-12">
-                                        <div class="col-6 cep">
-                                            <label id="cadastro-informacoes">CEP</label>
+                                        <div class="col-6">
+                                            <label id="cadastro-informacoes">CIDADE</label>
                                         </div>
                                         <div class="col-6">
-                                            <input type="text" id="cep">
+                                            <input type="text" id="cidade">
                                         </div>
                                     </div>
                                 </div>
@@ -150,7 +149,7 @@
                                             <label id="cadastro-informacoes">TELEFONE1</label>
                                         </div>
                                         <div class="col-6">
-                                            <input type="number" id="telefone1">
+                                            <input maxlength="14" type="text" id="telefone1" onkeydown="javascript: fMasc( this, mTel );" name="tel">
                                         </div>
                                     </div>
                                 </div>
@@ -163,7 +162,7 @@
                                             <label id="cadastro-informacoes">TELEFONE2</label>
                                         </div>
                                         <div class="col-6">
-                                            <input type="number" id="telefone2">
+                                            <input maxlength="14" type="text" id="telefone2" onkeydown="javascript: fMasc( this, mTel );" name="tel">
                                         </div>
                                     </div>
                                 </div>
