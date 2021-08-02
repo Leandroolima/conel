@@ -844,11 +844,10 @@ background-image: url('../img/light-bulb-lit-between-many-lightsIMGGRANDE.png');
     font-weight: normal;
     font-size: 24px;
     line-height: 28px;
-    color: #FFFFFF;;
+    color: #FFFFFF;
     
     }
 
-<<<<<<< HEAD
 
 
     /* COMO A ENERGIA ELÉTRICA CHEGA EM NOSSAS CASAS */
@@ -992,10 +991,10 @@ margin-left: 22px;
     color: #000000;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-estacao-geradora-barra{
-    width: 687px;
+    width: 580px;
 height: 257px;
 margin-top: 60px;
-margin-left: 207px;
+margin-left: 78px;
 background: #F3960B;
 opacity: 0.7;
 border-radius: 50px;
@@ -1028,10 +1027,10 @@ margin-left: 22px;
     color: #000000;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-linhas-de-transmissao-barra{
-    width: 687px;
+    width: 580px;
 height: 257px;
 margin-top: 60px;
-margin-left: 207px;
+margin-left: 78px;
 background: #15CF11;
 opacity: 0.7;
 border-radius: 50px;
@@ -1063,10 +1062,10 @@ margin-left: 22px;
 }
 
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-subestacao-de-transmissao-barra{
-    width: 687px;
+    width: 580px;
 height: 257px;
 margin-top: 60px;
-margin-left: 150px;
+margin-left: 78px;
 background: #2093D6;
 opacity: 0.7;
 border-radius: 50px;
@@ -1098,10 +1097,10 @@ margin-left: 22px;
     color: #000000;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-subestacoes-de-distribuicao-barra{
-    width: 687px;
+    width: 580px;
 height: 257px;
 margin-top: 60px;
-margin-left: 150px;
+margin-left: 78px;
 background: #DFDD26;
 opacity: 0.7;
 border-radius: 50px;
@@ -1118,7 +1117,7 @@ opacity: 0.7;
 border-radius: 50%;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-fiacao-dos-postes{
-    width: 283px;
+
     height: 40px;
     display: inline-block;
     margin-top: 162px;
@@ -1131,10 +1130,10 @@ margin-left: 22px;
     color: #000000;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-fiacao-dos-postes-barra{
-    width: 687px;
+    width: 580px;
 height: 257px;
 margin-top: 60px;
-margin-left: 207px;
+margin-left: 78px;
 background: #262424;
 opacity: 0.7;
 border-radius: 50px;
@@ -1151,7 +1150,7 @@ opacity: 0.7;
 border-radius: 50%;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-consumidor-final{
-    width: 283px;
+
     height: 40px;
     display: inline-block;
     margin-top: 162px;
@@ -1164,10 +1163,10 @@ margin-left: 22px;
     color: #000000;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-consumidor-final-barra{
-    width: 687px;
+    width: 580px;
 height: 257px;
 margin-top: 60px;
-margin-left: 207px;
+margin-left: 78px;
 background: #00578A;
 opacity: 0.7;
 border-radius: 50px;
@@ -1180,8 +1179,6 @@ border-radius: 50px;
 
 
 
-=======
->>>>>>> af6359370205509cb7e5f43ff2ceedb6dff8791c
     #cadastro-informacoes-bairro{
         font-family: 'exo_2light';
     font-weight: normal;
