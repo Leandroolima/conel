@@ -8,7 +8,7 @@ const rotaTrabalhe = require('./routes/trabalhe')
 
 app.use(express.static(__dirname + '/public'))
 
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
 app.get('/' , (req, res) =>{
@@ -51,11 +51,15 @@ app.get('/saude_trabalho', (req, res) => {
     res.sendFile(__dirname + '/public/paginas/saude_trabalho.html');
 })
 
-app.get('/LPT', (req,res) => {
+app.get('/LPT', (req, res) => {
     res.sendFile(__dirname + '/public/paginas/conel_LPT.html');
 })
 
-app.use('/denuncia', rotaDenuncia);
+app.get('/adm/cadastro', (req, res) => {
+    res.sendFile(__dirname + '/public/paginas/adm_cadastro.html')
+})
+
+app.use('/denuncias', rotaDenuncia);
 app.use('/cadastros', rotaCadastros);
 app.use('/trabalhe', rotaTrabalhe);
 
