@@ -855,7 +855,7 @@ background-image: url('../img/light-bulb-lit-between-many-lightsIMGGRANDE.png');
     height: 380px;
     margin-left: 70px;
     margin-right: 70px;
-    margin-top: 203px;
+    margin-top: 99px;
     background-image: url('../img/338033\(1\).png');
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-barra{
@@ -966,10 +966,10 @@ border-radius: 50px 0px;
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-estacao-geradora-bola{
     width: 93px;
 height: 93px;
-margin-left: 76px;
 margin-top: 136px;
-background: #F3960B;
-opacity: 0.7;
+margin-left: 70px;
+margin-right: -80px;
+background: #f3960bba;
 border-radius: 50%;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-estacao-geradora{
@@ -977,7 +977,7 @@ border-radius: 50%;
     height: 40px;
     display: inline-block;
     margin-top: 162px;
-margin-left: 22px;
+    margin-left: 120px;
     font-family: 'robotoregular';
     font-style: normal;
     font-weight: bold;
@@ -986,15 +986,25 @@ margin-left: 22px;
     color: #000000;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-estacao-geradora-barra{
-    width: 580px;
-height: 257px;
-margin-top: 60px;
-margin-left: 78px;
-background: #F3960B;
-opacity: 0.7;
-border-radius: 50px;
+    width: 656px;
+    height: 257px;
+    margin-top: 60px;
+    margin-left: 78px;
+    background: #f3960bba;
+    border-radius: 50px;
 }
-
+#SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-estacao-geradora-texto{
+    width: 612px;
+    height: 96px;
+    margin-left: 26px;
+    margin-top: 32px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120%;
+    color: #000000;
+}
 
 
 
@@ -1002,10 +1012,10 @@ border-radius: 50px;
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-linhas-de-transmissao-bola{
     width: 93px;
 height: 93px;
-margin-left: 76px;
 margin-top: 136px;
-background: #15CF11;
-opacity: 0.7;
+margin-left: 70px;
+margin-right: -80px;
+background:#15cf11b8;
 border-radius: 50%;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-linhas-de-transmissao{
@@ -1013,7 +1023,8 @@ border-radius: 50%;
     height: 40px;
     display: inline-block;
     margin-top: 162px;
-margin-left: 22px;
+    margin-left: 120px;
+
     font-family: 'robotoregular';
     font-style: normal;
     font-weight: bold;
@@ -1022,13 +1033,33 @@ margin-left: 22px;
     color: #000000;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-linhas-de-transmissao-barra{
-    width: 580px;
+    width: 656px;
 height: 257px;
 margin-top: 60px;
 margin-left: 78px;
-background: #15CF11;
-opacity: 0.7;
+background:#15cf11b8;
 border-radius: 50px;
+}
+#SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-linhas-de-transmissao-texto{
+    width: 612px;
+    margin-left: 35px;
+    margin-top: 60px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120%;
+    color: #000000;
+}
+#SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-linhas-de-transmissao-texto2{
+    width: 612px;
+    margin-left: 35px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120%;
+    color: #000000;
 }
 
 
@@ -1036,10 +1067,10 @@ border-radius: 50px;
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-subestacao-de-transmissao-bola{
     width: 93px;
 height: 93px;
-margin-left: 76px;
 margin-top: 136px;
-background: #2093D6;
-opacity: 0.7;
+margin-right: -44px;
+    margin-left: 65px;
+    background: #2093d6bf;
 border-radius: 50%;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-subestacao-de-transmissao{
@@ -1047,24 +1078,38 @@ border-radius: 50%;
     height: 40px;
     display: inline-block;
     margin-top: 162px;
-margin-left: 22px;
+    margin-left: 60px;
+
     font-family: 'robotoregular';
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 33px;
     line-height: 110%; 
     color: #000000;
 }
 
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-subestacao-de-transmissao-barra{
-    width: 580px;
+    width: 656px;
 height: 257px;
 margin-top: 60px;
-margin-left: 78px;
-background: #2093D6;
-opacity: 0.7;
+margin-left: 50px;
+background: #2093d6bf;
 border-radius: 50px;
 }
+#SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-subestacao-de-transmissao-texto{
+    width: 612px;
+    height: 96px;
+    margin-left: 26px;
+    margin-top: 40px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120%;
+    color: #000000;
+}
+
+
 
 
 
@@ -1072,8 +1117,9 @@ border-radius: 50px;
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-subestacoes-de-distribuicao-bola{
     width: 93px;
 height: 93px;
-margin-left: 76px;
 margin-top: 136px;
+margin-right: -44px;
+margin-left: 65px;
 background: #DFDD26;
 opacity: 0.7;
 border-radius: 50%;
@@ -1083,32 +1129,60 @@ border-radius: 50%;
     height: 40px;
     display: inline-block;
     margin-top: 162px;
-margin-left: 22px;
+    margin-left: 60px;
+
+
     font-family: 'robotoregular';
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 33px;
     line-height: 110%; 
     color: #000000;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-subestacoes-de-distribuicao-barra{
-    width: 580px;
+    width: 656px;
 height: 257px;
 margin-top: 60px;
-margin-left: 78px;
+margin-left: 50px;
 background: #DFDD26;
-opacity: 0.7;
+
 border-radius: 50px;
 }
+#SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-subestacoes-de-distribuicao-texto{
+    width: 478px;
+    margin-left: 35px;
+    margin-top: 45px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120%;
+    color: #000000;
+}
+#SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-subestacoes-de-distribuicao-texto2{
+    width: 610px;
+    margin-left: 35px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120%;
+    color: #000000;
+}
+
+
+
+
+
 
 
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-fiacao-dos-postes-bola{
     width: 93px;
 height: 93px;
-margin-left: 76px;
 margin-top: 136px;
-background: #262424;
-opacity: 0.7;
+margin-left: 70px;
+margin-right: -80px;
+background: #262424a8;
 border-radius: 50%;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-fiacao-dos-postes{
@@ -1116,7 +1190,8 @@ border-radius: 50%;
     height: 40px;
     display: inline-block;
     margin-top: 162px;
-margin-left: 22px;
+    margin-left: 120px;
+
     font-family: 'robotoregular';
     font-style: normal;
     font-weight: bold;
@@ -1125,23 +1200,40 @@ margin-left: 22px;
     color: #000000;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-fiacao-dos-postes-barra{
-    width: 580px;
+    width: 656px;
 height: 257px;
 margin-top: 60px;
 margin-left: 78px;
-background: #262424;
-opacity: 0.7;
+background: #262424a8;
 border-radius: 50px;
 }
+#SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-fiacao-dos-postes-texto{
+    width: 612px;
+    height: 96px;
+    margin-left: 26px;
+    margin-top: 65px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
 
 
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-consumidor-final-bola{
     width: 93px;
 height: 93px;
-margin-left: 76px;
 margin-top: 136px;
-background: #00578A;
-opacity: 0.7;
+margin-left: 70px;
+margin-right: -80px;
+background: #00578ab0;
 border-radius: 50%;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-consumidor-final{
@@ -1149,7 +1241,8 @@ border-radius: 50%;
     height: 40px;
     display: inline-block;
     margin-top: 162px;
-margin-left: 22px;
+    margin-left: 120px;
+
     font-family: 'robotoregular';
     font-style: normal;
     font-weight: bold;
@@ -1158,16 +1251,46 @@ margin-left: 22px;
     color: #000000;
 }
 .SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-consumidor-final-barra{
-    width: 580px;
+    width: 656px;
 height: 257px;
 margin-top: 60px;
 margin-left: 78px;
-background: #00578A;
-opacity: 0.7;
+background: #00578ab0;
 border-radius: 50px;
 }
+#SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-consumidor-final-texto{
+    width: 620px;
+    margin-left: 35px;
+    margin-top: 50px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120%;
+    color: #000000;
+}
+#SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-consumidor-final-texto2{
+    width: 610px;
+    margin-left: 35px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 120%;
+    color: #000000;
+}
 
-<<<<<<< HEAD
+
+
+.SEGUNDO-SITE-COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-ultimaimg{
+
+    width: 1266px;
+    height: 780px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 203px;
+    background-image: url('../img/FWWEWW1.png');
+}
 
 
 
@@ -1175,8 +1298,10 @@ border-radius: 50px;
 
 
 
-=======
->>>>>>> master
+
+
+
+
     #cadastro-informacoes-bairro{
         font-family: 'exo_2light';
     font-weight: normal;
