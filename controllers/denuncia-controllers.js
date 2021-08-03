@@ -28,3 +28,29 @@ exports.postDenuncia = async (req, res, next) => {
         return res.status(500).send({ error: error })
     }
 }
+
+exports.getDenuncia = async (req, res, next) => {
+    try {
+        const result = await mysql.execute('SELECT * FROM canal_denuncia');
+
+        const response = {
+            mensagem: 'Dados da denuncia',
+            cadastrado: result.map(cadastrado => {
+                return{
+                    id_denuncia: cadastrado.id_denuncia,
+                    denuncia: cadastrado.canal_denuncia,
+                    arquivo: cadastrado.arquivo,
+                    request: {
+                        tipo: 'POST',
+                        descricao: 'Pega os cadastro de denuncias',
+                        url: process.env.URL_API + 'denuncia'
+                    }
+                }
+            })
+        }
+        return res.status(201).send(response);
+    } catch (error) {
+        console.log(error)
+        return res.status(500).send({ error: error })
+    }
+}
