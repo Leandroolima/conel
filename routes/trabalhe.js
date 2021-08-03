@@ -12,7 +12,7 @@ const storeg = multer.diskStorage({
         cb(null,file.originalname)
     }
 })
-const fileFilter = (req, file, cb) =>{
+/*const fileFilter = (req, file, cb) =>{
 
     if (file.mimetype === 'image/jpeg'  || file.mimetype === 'image/png' || file.mimetype === 'application/pdf'){
    
@@ -20,13 +20,13 @@ const fileFilter = (req, file, cb) =>{
     }else{
         cb(null, false)
     }
-}
+}*/
 const upload = multer({ 
     storage: storeg,
-    fileFilter: fileFilter
 });
 
 
 router.post('/', upload.single('arquivo'), trabalheControllers.postTrabalhe);
+router.get('/', trabalheControllers.getTrabalhe)
 
 module.exports = router
