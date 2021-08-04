@@ -59,6 +59,18 @@ app.get('/adm/cadastro', (req, res) => {
     res.sendFile(__dirname + '/public/paginas/adm_cadastro.html')
 })
 
+app.get('/energia', (req , res) => {
+    res.sendFile(__dirname + '/public/paginas/como-a-energia-eletrica-chega-em-nossas-casas.html')
+})
+
+app.get('/adm/denuncia', (req, res) => {
+    res.sendFile(__dirname + '/public/paginas/adm_denuncia.html')
+})
+
+app.get('/adm/trabalhe', (req, res) => {
+    res.sendFile(__dirname + '/public/paginas/adm_trabalhe.html')
+})
+
 app.use('/denuncias', rotaDenuncia);
 app.use('/cadastros', rotaCadastros);
 app.use('/trabalhe', rotaTrabalhe);
