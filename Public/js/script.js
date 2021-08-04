@@ -34,10 +34,8 @@ class Cadastro {
             data.cadastrado.forEach(prd => {
                 this.arrayCadastros.push(prd);
             });
-            console.log(' arrayyyyyy');
 
             console.log(this.arrayCadastros);
-            console.log('passei')
             let tbody = document.getElementById('tbody')
             tbody.innerText = ''
             console.log(this.arrayCadastros.length)
@@ -69,6 +67,8 @@ class Cadastro {
                 td_telefone1.innerText = this.arrayCadastros[i].telefone1;
                 td_email.innerText = this.arrayCadastros[i].email;
                 td_inscricao_estadual.innerText = this.arrayCadastros[i].inscricao_estadual;
+                td_cnpj.innerText = document.getElementById('denuncia').innerText = this.arrayCadastros[i].cnpj;
+                console.log(td_cnpj)
 
 
                 td_id.classList.add('center');
@@ -82,7 +82,6 @@ class Cadastro {
         });
 
     }
-
     lerDados() {
         let cadastro = {}
 
@@ -176,7 +175,7 @@ class Cadastro {
         }
         console.log('passei')
         console.log(checarEmail)
-        if (cadastro.email != checarEmail() ) {
+        if (cadastro.email != checarEmail()) {
             msg += '- Informe o Email'
         }
         if (cadastro.inscricao_estadual == "") {
@@ -235,7 +234,79 @@ class Denuncia {
             document.location.reload(true);
         }
     }
+    async listaTabela() {
+        fetch('http://localhost:3000/denuncias', {
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        }).then(result => {
+            return result.json();
+        }).then(data => {
+            console.log(data);
+            data.cadastrado.forEach(prd => {
+                this.arrayDenuncia.push(prd);
+            });
 
+           /* let tbody = document.getElementById('tbody')
+            tbody.innerText = ''
+            console.log(this.arrayDenuncia.length)*/
+            for (let i = 0; i < this.arrayDenuncia.length; i++) {
+
+                let buttonaccodeon = document.createElement('button');
+                buttonaccodeon.classList.add("accordion");
+
+                let imgVisualizar = document.createElement('img');
+                imgVisualizar.classList.add("botaoaccordion");
+                imgVisualizar.src="../img/arrow-card-dash-down.svg";
+
+                let iddenuncia0 = document.createElement('span');
+                iddenuncia0.innerText = "DENUNCIA N: " 
+
+                let iddenuncia = document.createElement('span');
+                iddenuncia.setAttribute("id", "denuncia_numero"+i);
+
+                let datadenuncia0 = document.createElement('span');
+                datadenuncia0.innerText = "DATA DA DENUNCIA: " 
+                
+                let datadenuncia = document.createElement('span');
+                datadenuncia.setAttribute("id", "data_denuncia"+i);
+
+                iddenuncia.innerText = this.arrayDenuncia[i].id_denuncia
+
+
+
+                td_id.innerText = this.arrayDenuncia[i].id_denuncia;
+                td_canal_denuncia.innerText = this.arrayDenuncia[i].denuncia;
+
+
+                td_id.classList.add('center');
+
+                let imgVisualizar = document.createElement('img');
+                imgVisualizar.src = '../img/eye.png'
+                imgVisualizar.setAttribute("onclick", "cadastro.visualizar(" + this.arrayDenuncia[i].id_denuncia + ")")
+
+                td_acoes.appendChild(imgVisualizar)
+            }
+        });
+
+
+        
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+
+    }
     lerDados() {
         let denuncia = {}
 
@@ -450,19 +521,19 @@ function enviar() {
 }
 
 function checarEmail() {
-    
+
     var checar = document.getElementById('email').value
-    if (   document.getElementById('email').value == ""
+    if (document.getElementById('email').value == ""
         || document.getElementById('email').value.indexOf('@') == -1
-        || document.getElementById('email').value.indexOf('.') == -1)
-    {
+        || document.getElementById('email').value.indexOf('.') == -1) {
         document.getElementById("tooltiptext").style.opacity = "1";
         console.log(checar)
         return checar = 17;
-    }else {
+    } else {
         document.getElementById("tooltiptext").style.opacity = "0";
         console.log("aqui")
         console.log(checar)
         return checar
     }
 }
+
