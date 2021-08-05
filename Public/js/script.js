@@ -18,7 +18,7 @@ class Cadastro {
             }
 
             alert('Cadastro realizado')
-            //document.location.reload(true);
+            document.location.reload(true);
         }
     }
 
@@ -67,8 +67,6 @@ class Cadastro {
                 td_telefone1.innerText = this.arrayCadastros[i].telefone1;
                 td_email.innerText = this.arrayCadastros[i].email;
                 td_inscricao_estadual.innerText = this.arrayCadastros[i].inscricao_estadual;
-                td_cnpj.innerText = document.getElementById('denuncia').innerText = this.arrayCadastros[i].cnpj;
-                console.log(td_cnpj)
 
 
                 td_id.classList.add('center');
@@ -234,7 +232,8 @@ class Denuncia {
             document.location.reload(true);
         }
     }
-    async listaTabela() {
+    async listaDenuncia() {
+
         fetch('http://localhost:3000/denuncias', {
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
@@ -247,72 +246,65 @@ class Denuncia {
                 this.arrayDenuncia.push(prd);
             });
 
-           /* let tbody = document.getElementById('tbody')
-            tbody.innerText = ''
-            console.log(this.arrayDenuncia.length)*/
+            console.log(this.arrayDenuncia.length)
             for (let i = 0; i < this.arrayDenuncia.length; i++) {
 
                 let buttonaccodeon = document.createElement('button');
                 buttonaccodeon.classList.add("accordion");
+                buttonaccodeon.addEventListener("click", function () {
 
-                let imgVisualizar = document.createElement('img');
-                imgVisualizar.classList.add("botaoaccordion");
-                imgVisualizar.src="../img/arrow-card-dash-down.svg";
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
 
-                let iddenuncia0 = document.createElement('span');
-                iddenuncia0.innerText = "DENUNCIA N: " 
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
 
-                let iddenuncia = document.createElement('span');
-                iddenuncia.setAttribute("id", "denuncia_numero"+i);
+                });
+                document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
+                buttonaccodeon.innerHTML = `<img class="botaoaccordion" src="../img/arrow-card-dash-down.svg"> <span id="denuncia_numero">DENUNCIA Nº </span> <span id="denuncia_numero">${this.arrayDenuncia[i].id_denuncia}</span> 
+                <span id="texto-denuncia-2">DATA DA DENUNCIA: </span> <span id="data_denun">${this.arrayDenuncia[i].data_denuncia}</span>`
 
-                let datadenuncia0 = document.createElement('span');
-                datadenuncia0.innerText = "DATA DA DENUNCIA: " 
-                
-                let datadenuncia = document.createElement('span');
-                datadenuncia.setAttribute("id", "data_denuncia"+i);
+                document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
 
-                iddenuncia.innerText = this.arrayDenuncia[i].id_denuncia
-
-
-
-                td_id.innerText = this.arrayDenuncia[i].id_denuncia;
-                td_canal_denuncia.innerText = this.arrayDenuncia[i].denuncia;
+                let divpanel = document.createElement('div');
+                divpanel.classList.add("panel");
 
 
-                td_id.classList.add('center');
+                divpanel.innerHTML = `<div class="row-1">
+                                       <div class="col-6"> 
+                                       <p id="descricao_denuncia">${this.arrayDenuncia[i].denuncia}</p>
+                                       </div>
+                                       <div class="col-6 alinhar-denuncia">
+                                       <img class="icon-1" onclick="denuncia.visualizar(${this.arrayDenuncia[i].id_denuncia})" src="../img/eye.png">
+                                       <img class="icon-2" onclick="denuncia.excluir(${this.arrayDenuncia[i].id_denuncia})" src="../img/excluir.png">
+                                       </div>
+                                       </div>`
 
-                let imgVisualizar = document.createElement('img');
-                imgVisualizar.src = '../img/eye.png'
-                imgVisualizar.setAttribute("onclick", "cadastro.visualizar(" + this.arrayDenuncia[i].id_denuncia + ")")
+                document.getElementsByClassName("coluna")[0].appendChild(divpanel);
 
-                td_acoes.appendChild(imgVisualizar)
             }
         });
 
-
-        
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        }
-
     }
+    data() {
+        let dada = new Date()
+        document.getElementById("data_denuncia").value = dada.toString()
+        document.getElementById("data_denuncia").value
+        this.lerDados
+    }
+
     lerDados() {
         let denuncia = {}
 
+        this.data()
         denuncia.id = 0;
         denuncia.canal_denuncia = document.getElementById('conte_mais').value;
+        denuncia.data_denuncia = document.getElementById('data_denuncia').value.replace("GMT-0300 (Horário Padrão de Brasília)", "")
         denuncia.arquivo = document.getElementById('arquivo').value
+
         return denuncia;
     }
 
@@ -322,9 +314,10 @@ class Denuncia {
         const fileField = document.querySelector('input[type="file"]');
 
         formData.append('canal_denuncia', denuncia.canal_denuncia);
+        formData.append('data_denuncia', denuncia.data_denuncia);
         formData.append('arquivo', fileField.files[0]);
 
-        fetch('http://localhost:3000/denuncia', {
+        fetch('http://localhost:3000/denuncias', {
             method: 'POST',
             body: formData,
 
@@ -334,6 +327,7 @@ class Denuncia {
 
             denuncia.canal_denuncia = data.cadastrado.canal_denuncia;
             denuncia.arquivo = data.cadastrado.arquivo;
+            denuncia.data_denuncia = data.cadastrado.data_denuncia;
 
             this.arrayDenuncia.push(denuncia);
 
@@ -355,6 +349,41 @@ class Denuncia {
         }
         return true;
 
+    }
+    async visualizar(id_denuncia) {
+        console.log(id_denuncia)
+        fetch('http://localhost:3000/denuncias/' + id_denuncia)
+            .then(result => {
+                console.log(result)
+                return result.json()
+            }).then(data => {
+                console.log(data)
+                for (let i = 0; i < this.arrayDenuncia.length; i++) {
+                    if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
+                        window.location.assign("http://localhost:3000" + data.cadastrado.arquivo)
+
+                    }
+                }
+            });
+
+    }
+    async excluir(id_denuncia){
+        if (confirm('Deseja realmente deletar a denuncia N ' + id_denuncia)) {
+            fetch('http://localhost:3000/denuncias/' + id_denuncia, {
+                method: 'DELETE'
+            }).then(result => {
+                return result.json();
+            }).then(data => {
+
+                for (let i = 0; i < this.arrayDenuncia.length; i++) {
+                    if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
+                        console.log('começo')
+                        this.arrayDenuncia.splice(this.arrayDenuncia, 1);
+                        document.location.reload(true);
+                    }
+                }
+            })
+        }
     }
 
 }
@@ -430,6 +459,41 @@ class Trabalhe {
         }
         return true;
 
+    }
+    async visualizar(id_denuncia) {
+        console.log(id_denuncia)
+        fetch('http://localhost:3000/denuncias/' + id_denuncia)
+            .then(result => {
+                console.log(result)
+                return result.json()
+            }).then(data => {
+                console.log(data)
+                for (let i = 0; i < this.arrayDenuncia.length; i++) {
+                    if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
+                        window.location.assign("http://localhost:3000" + data.cadastrado.arquivo)
+
+                    }
+                }
+            });
+
+    }
+    async excluir(id_denuncia){
+        if (confirm('Deseja realmente deletar a denuncia N ' + id_denuncia)) {
+            fetch('http://localhost:3000/denuncias/' + id_denuncia, {
+                method: 'DELETE'
+            }).then(result => {
+                return result.json();
+            }).then(data => {
+
+                for (let i = 0; i < this.arrayDenuncia.length; i++) {
+                    if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
+                        console.log('começo')
+                        this.arrayDenuncia.splice(this.arrayDenuncia, 1);
+                        document.location.reload(true);
+                    }
+                }
+            })
+        }
     }
 }
 

@@ -1720,19 +1720,44 @@ header{
   }
   
   .active, .accordion:hover {
-    background-color: #ccc;
+    background-color: #DFDD26;
   }
-  
+
   .panel {
     padding: 0 18px;
+    display: none;
     background-color: white;
-    max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   }
-}
-#botaoaccordion{
+  #data_denuncia{
+      display: none;
+  }
+  #data_denun{
+      font-family:  'exo_2light';
+      margin-left: 5px;
+  }
+  #texto-denuncia-2{
+    font-family:  'exo_2light';
+    margin-left: 158px;
+  }
+  #denuncia_numero{
+    font-family:  'exo_2light';
+    margin-left: 16px;
+  }
+  .icon-1{
+    width: 40px;
+    cursor: pointer;
+    margin-left: 556px;
 
-    margin: 10px;
+  }
+  .icon-2{
+    width: 40px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
 }
+
 
