@@ -1460,6 +1460,63 @@ border-radius: 50px;
 
 
 
+/* GRUPOS DE INTERESSE*/
+
+.grupos-de-interesses{
+    width: 100%;
+    height: 288px;
+    opacity: 100%;
+    background-image: url(../img/businessman-touching-the-tip-of-a-bar-chart1.png);
+
+}
+
+.grupos-de-interesses-barra {
+    width: 1200px;
+    height: 555px;
+    margin-top: 84px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    background: #00578A;
+    border-radius: 50px 0px;
+}
+.grupos-de-interesses-span {
+    width: 360px;
+    height: 51px;
+    display: inline-block;
+    background: #DFDD26;
+    border-radius: 50px 0px;
+}
+#grupos-de-interesses-span2 {
+    display: inline-block;
+    margin-left: 22px;
+    margin-top: 12px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 35px;
+    color: #000000;
+}
+#grupos-de-interesses-p1 {
+    width: 1075px;
+    margin-left: 60px;
+    margin-top: 80px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 43px;
+    color: #FFFFFF;
+}
+.grupos-de-interesses-ultimaimg{
+
+
+    margin-left: 45px;
+    margin-right: 70px;
+    margin-bottom: 92px;
+    margin-top: 20px;
+}
+
 
 
 
@@ -1896,4 +1953,35 @@ header{
 
     margin: 10px;
 }
+
+.slideOutUp:hover {
+    -webkit-animation-name: slideOutUp;
+    animation-name: slideOutUp;
+    -webkit-animation-duration: 5s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes slideOutUp {
+     0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        }
+        100% {
+
+        -webkit-transform: translateY(-10%);
+        transform: translateY(-10%);
+        }
+        }
+        @keyframes slideOutUp {
+        0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        }
+        100% {
+
+        -webkit-transform: translateY(-20%);
+        transform: translateY(-20%);
+        }
+    } 
 
