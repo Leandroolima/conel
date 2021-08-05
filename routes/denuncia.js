@@ -28,5 +28,7 @@ const upload = multer({
 
 router.post('/', upload.single('arquivo'), denunciaControllers.postDenuncia);
 router.get('/', denunciaControllers.getDenuncia)
+router.get('/:id_denuncia', denunciaControllers.getUmaDenuncia)
+router.delete('/:id_denuncia', denunciaControllers.deleteDenuncia)
 
 module.exports = router
