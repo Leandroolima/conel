@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const trabalheControllers = require('../controllers/trabalhe-controllers')
+const login = require('../middleware/login');
 
 const storeg = multer.diskStorage({
 
@@ -28,5 +29,8 @@ const upload = multer({
 
 router.post('/', upload.single('arquivo'), trabalheControllers.postTrabalhe);
 router.get('/', trabalheControllers.getTrabalhe)
+router.get('/:id_trabalhe', trabalheControllers.getUmCurriculo)
+router.delete('/:id_trabalhe', trabalheControllers.deleteCurriculo)
+
 
 module.exports = router

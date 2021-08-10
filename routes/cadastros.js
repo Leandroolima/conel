@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const cadastrosController = require('../controllers/cadastros-controllers')
+const login = require('../middleware/login');
 
 const storeg = multer.diskStorage({
 

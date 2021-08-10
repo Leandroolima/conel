@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const denunciaControllers = require('../controllers/denuncia-controllers')
+const login = require('../middleware/login');
 
 const storeg = multer.diskStorage({
 
@@ -29,6 +30,6 @@ const upload = multer({
 router.post('/', upload.single('arquivo'), denunciaControllers.postDenuncia);
 router.get('/', denunciaControllers.getDenuncia)
 router.get('/:id_denuncia', denunciaControllers.getUmaDenuncia)
-router.delete('/:id_denuncia', denunciaControllers.deleteDenuncia)
+router.delete('/:id_denuncia',login.obrigatorio, denunciaControllers.deleteDenuncia)
 
 module.exports = router
