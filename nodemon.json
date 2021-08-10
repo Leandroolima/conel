@@ -1,9 +1,9 @@
 {
     "env":{ 
         "MYSQL_USER": "root",
-        "MYSQL_PASSWORD": "kuro",
+        "MYSQL_PASSWORD": "rains2020",
         "MYSQL_DATABASE": "conel",
-        "MYSQL_HOST": "localhost",
+        "MYSQL_HOST": "35.198.38.241",
         "MYSQL_PORT": 3306,
         "JWT_KEY": "Hashira",
         "URL_API": "http://localhots:3000/"
