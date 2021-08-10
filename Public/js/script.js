@@ -693,8 +693,6 @@ const options = {
 
 function completar() {
     const cep = document.getElementById("cep")
-    // let Cep = document.getElementById("cep").value;
-    //  console.log(Cep)
     let search = cep.value.replace("-", "")
     search = search.replace(".", "")
     fetch(`https://viacep.com.br/ws/${search}/json/`, options).then((response) => {
@@ -738,5 +736,28 @@ function checarEmail() {
         console.log(checar)
         return checar
     }
+}
+
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search");
+
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();
+});
+
+searchBtn.addEventListener("click", ()=>{ 
+  sidebar.classList.toggle("open");
+  menuBtnChange(); 
+});
+
+
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+ }
 }
 

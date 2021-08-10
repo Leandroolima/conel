@@ -57,7 +57,7 @@ app.get('/LPT', (req, res) => {
     res.sendFile(__dirname + '/public/paginas/conel_LPT.html');
 })
 
-app.get('/adm/cadastro', login.obrigatorio, (req, res) => {
+app.get('/adm/cadastro',  (req, res) => {
     res.sendFile(__dirname + '/public/paginas/adm_cadastro.html')
 })
 
@@ -65,7 +65,7 @@ app.get('/energia', (req , res) => {
     res.sendFile(__dirname + '/public/paginas/como-a-energia-eletrica-chega-em-nossas-casas.html')
 })
 
-app.get('/adm/denuncia',login.obrigatorio, (req, res) => {
+app.get('/adm/denuncia', (req, res) => {
     res.sendFile(__dirname + '/public/paginas/adm_denuncia.html')
 })
 
@@ -73,9 +73,14 @@ app.get('/login', (req, res) => {
     res.sendFile(__dirname + '/public/paginas/login.html')
 })
 
-app.get('/adm/trabalhe', login.obrigatorio, (req, res) => {
+app.get('/adm/curriculo',  (req, res) => {
     res.sendFile(__dirname + '/public/paginas/adm_trabalhe.html')
 })
+
+app.get('/dashboard',(req, res) => {
+    res.sendFile(__dirname + '/public/paginas/dashboard_adm.html')
+})
+
 
 app.use('/denuncias', rotaDenuncia);
 app.use('/cadastros', rotaCadastros);

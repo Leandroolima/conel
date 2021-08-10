@@ -1977,6 +1977,9 @@ header{
       font-family:  'exo_2light';
       margin-left: 5px;
   }
+  #data_curriculo{
+    display: none;
+  }
   #texto-denuncia-2{
     font-family:  'exo_2light';
     margin-left: 158px;
