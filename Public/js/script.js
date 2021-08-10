@@ -1,5 +1,3 @@
-
-
 class Cadastro {
 
     constructor() {
@@ -12,9 +10,6 @@ class Cadastro {
         if (this.validaCampos(cadastro)) {
             if (this.editId == null) {
                 this.adicionar(cadastro)
-            } else {
-                console.log("chegou")
-                this.atualizar(this.editId, cadastro)
             }
 
             alert('Cadastro realizado')
@@ -23,7 +18,7 @@ class Cadastro {
     }
 
     async listaTabela() {
-        fetch('http://localhost:3000/cadastros', {
+        fetch('http://localhost:2000/cadastros', {
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             }
@@ -51,6 +46,7 @@ class Cadastro {
                 let td_estado = tr.insertCell();
                 let td_cep = tr.insertCell();
                 let td_telefone1 = tr.insertCell();
+                let td_telefone2 = tr.insertCell();
                 let td_email = tr.insertCell();
                 let td_inscricao_estadual = tr.insertCell();
                 let td_acoes = tr.insertCell();
@@ -65,6 +61,7 @@ class Cadastro {
                 td_estado.innerText = this.arrayCadastros[i].estado;
                 td_cep.innerText = this.arrayCadastros[i].cep;
                 td_telefone1.innerText = this.arrayCadastros[i].telefone1;
+                td_telefone2.innerText = this.arrayCadastros[i].telefone2;
                 td_email.innerText = this.arrayCadastros[i].email;
                 td_inscricao_estadual.innerText = this.arrayCadastros[i].inscricao_estadual;
 
@@ -74,6 +71,7 @@ class Cadastro {
                 let imgVisualizar = document.createElement('img');
                 imgVisualizar.src = '../img/eye.png'
                 imgVisualizar.setAttribute("onclick", "cadastro.visualizar(" + this.arrayCadastros[i].id_cadastrado + ")")
+                imgVisualizar.classList.add("icon-3")
 
                 td_acoes.appendChild(imgVisualizar)
             }
@@ -120,7 +118,7 @@ class Cadastro {
         formData.append('inscricao_estadual', cadastro.inscricao_estadual)
         formData.append('arquivo', fileField.files[0]);
 
-        fetch('http://localhost:3000/cadastros', {
+        fetch('http://localhost:2000/cadastros', {
             method: 'POST',
             body: formData,
 
@@ -191,7 +189,7 @@ class Cadastro {
 
     }
     async visualizar(id_cadastrado) {
-        fetch('http://localhost:3000/cadastros/' + id_cadastrado)
+        fetch('http://localhost:2000/cadastros/' + id_cadastrado)
             .then(result => {
                 console.log(result)
                 return result.json()
@@ -199,7 +197,7 @@ class Cadastro {
                 console.log(data)
                 for (let i = 0; i < this.arrayCadastros.length; i++) {
                     if (this.arrayCadastros[i].id_cadastrado == id_cadastrado) {
-                        window.location.assign("http://localhost:3000" + data.cadastrado.arquivo)
+                        window.location.assign("http://localhost:2000" + data.cadastrado.arquivo)
 
                     }
                 }
@@ -208,9 +206,9 @@ class Cadastro {
     }
 }
 
-
-
 var cadastro = new Cadastro
+
+
 
 class Denuncia {
     constructor() {
@@ -223,9 +221,6 @@ class Denuncia {
         if (this.validaCampos(denuncia)) {
             if (this.editId == null) {
                 this.adicionar(denuncia)
-            } else {
-                console.log("chegou")
-                this.atualizar(this.editId, denuncia)
             }
 
             alert('denuncia realizado')
@@ -234,7 +229,7 @@ class Denuncia {
     }
     async listaDenuncia() {
 
-        fetch('http://localhost:3000/denuncias', {
+        fetch('http://localhost:2000/denuncias', {
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             }
@@ -317,7 +312,7 @@ class Denuncia {
         formData.append('data_denuncia', denuncia.data_denuncia);
         formData.append('arquivo', fileField.files[0]);
 
-        fetch('http://localhost:3000/denuncias', {
+        fetch('http://localhost:2000/denuncias', {
             method: 'POST',
             body: formData,
 
@@ -352,7 +347,7 @@ class Denuncia {
     }
     async visualizar(id_denuncia) {
         console.log(id_denuncia)
-        fetch('http://localhost:3000/denuncias/' + id_denuncia)
+        fetch('http://localhost:2000/denuncias/' + id_denuncia)
             .then(result => {
                 console.log(result)
                 return result.json()
@@ -360,7 +355,7 @@ class Denuncia {
                 console.log(data)
                 for (let i = 0; i < this.arrayDenuncia.length; i++) {
                     if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
-                        window.location.assign("http://localhost:3000" + data.cadastrado.arquivo)
+                        window.location.assign("http://localhost:2000" + data.cadastrado.arquivo)
 
                     }
                 }
@@ -369,7 +364,7 @@ class Denuncia {
     }
     async excluir(id_denuncia){
         if (confirm('Deseja realmente deletar a denuncia N ' + id_denuncia)) {
-            fetch('http://localhost:3000/denuncias/' + id_denuncia, {
+            fetch('http://localhost:2000/denuncias/' + id_denuncia, {
                 method: 'DELETE'
             }).then(result => {
                 return result.json();
@@ -390,6 +385,8 @@ class Denuncia {
 
 var denuncia = new Denuncia
 
+
+
 class Trabalhe {
     constructor() {
         this.arrayTrabalhe = [];
@@ -401,12 +398,8 @@ class Trabalhe {
         if (this.validaCampos(trabalhe)) {
             if (this.editId == null) {
                 this.adicionar(trabalhe)
-            } else {
-                console.log("chegou")
-                this.atualizar(this.editId, trabalhe)
-            }
-
-            alert('trabalhe realizado')
+            } 
+            alert('Curriculo cadastrado')
             document.location.reload(true);
         }
     }
@@ -414,10 +407,75 @@ class Trabalhe {
     lerDados() {
         let trabalhe = {}
 
+        this.data()
         trabalhe.id = 0;
         trabalhe.conte_mais = document.getElementById('conte_mais').value;
         trabalhe.arquivo = document.getElementById('arquivo').value
+        trabalhe.data_curriculo = document.getElementById('data_curriculo').value.replace("GMT-0300 (Horário Padrão de Brasília)", "")
         return trabalhe;
+    }
+    async listaTrabalhe() {
+
+        fetch('http://localhost:2000/trabalhe', {
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        }).then(result => {
+            return result.json();
+        }).then(data => {
+            console.log(data);
+            data.cadastrado.forEach(prd => {
+                this.arrayTrabalhe.push(prd);
+            });
+
+            console.log(this.arrayTrabalhe.length)
+            for (let i = 0; i < this.arrayTrabalhe.length; i++) {
+
+                let buttonaccodeon = document.createElement('button');
+                buttonaccodeon.classList.add("accordion");
+                buttonaccodeon.addEventListener("click", function () {
+
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+
+                });
+                document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
+                buttonaccodeon.innerHTML = `<img class="botaoaccordion" src="../img/arrow-card-dash-down.svg"> <span id="denuncia_numero">CURRICULO Nº </span> <span id="denuncia_numero">${this.arrayTrabalhe[i].id_trabalhe}</span> 
+                <span id="texto-denuncia-2">DATA DA ENTREGA: </span> <span id="data_denun">${this.arrayTrabalhe[i].data_curriculo}</span>`
+
+                document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
+
+                let divpanel = document.createElement('div');
+                divpanel.classList.add("panel");
+
+
+                divpanel.innerHTML = `<div class="row-1">
+                                       <div class="col-6"> 
+                                       <p id="descricao_denuncia">${this.arrayTrabalhe[i].conte_mais}</p>
+                                       </div>
+                                       <div class="col-6 alinhar-denuncia">
+                                       <img class="icon-1" onclick="trabalhe.visualizar(${this.arrayTrabalhe[i].id_trabalhe})" src="../img/eye.png">
+                                       <img class="icon-2" onclick="trabalhe.excluir(${this.arrayTrabalhe[i].id_trabalhe})" src="../img/excluir.png">
+                                       </div>
+                                       </div>`
+
+                document.getElementsByClassName("coluna")[0].appendChild(divpanel);
+
+            }
+        });
+
+    }
+    data() {
+        let dada = new Date()
+        document.getElementById("data_curriculo").value = dada.toString()
+        document.getElementById("data_curriculo").value
+        this.lerDados
     }
 
     async adicionar(trabalhe) {
@@ -426,9 +484,10 @@ class Trabalhe {
         const fileField = document.querySelector('input[type="file"]');
 
         formData.append('conte_mais', trabalhe.conte_mais);
+        formData.append('data_curriculo', trabalhe.data_curriculo);
         formData.append('arquivo', fileField.files[0]);
 
-        fetch('http://localhost:3000/trabalhe', {
+        fetch('http://localhost:2000/trabalhe', {
             method: 'POST',
             body: formData,
 
@@ -438,6 +497,7 @@ class Trabalhe {
 
             trabalhe.conte_mais = data.cadastrado.conte_mais;
             trabalhe.arquivo = data.cadastrado.arquivo;
+            trabalhe.data_curriculo = data.cadastrado.data_curriculo;
 
             this.arrayTrabalhe.push(trabalhe);
 
@@ -460,35 +520,35 @@ class Trabalhe {
         return true;
 
     }
-    async visualizar(id_denuncia) {
-        console.log(id_denuncia)
-        fetch('http://localhost:3000/denuncias/' + id_denuncia)
+    async visualizar(id_trabalhe) {
+        console.log(id_trabalhe)
+        fetch('http://localhost:2000/trabalhe/' + id_trabalhe)
             .then(result => {
                 console.log(result)
                 return result.json()
             }).then(data => {
                 console.log(data)
-                for (let i = 0; i < this.arrayDenuncia.length; i++) {
-                    if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
-                        window.location.assign("http://localhost:3000" + data.cadastrado.arquivo)
+                for (let i = 0; i < this.arrayTrabalhe.length; i++) {
+                    if (this.arrayTrabalhe[i].id_trabalhe == id_trabalhe) {
+                        window.location.assign("http://localhost:2000" + data.cadastrado.arquivo)
 
                     }
                 }
             });
 
     }
-    async excluir(id_denuncia){
-        if (confirm('Deseja realmente deletar a denuncia N ' + id_denuncia)) {
-            fetch('http://localhost:3000/denuncias/' + id_denuncia, {
+    async excluir(id_trabalhe){
+        if (confirm('Deseja realmente deletar o curriculo N ' + id_trabalhe)) {
+            fetch('http://localhost:2000/trabalhe/' + id_trabalhe, {
                 method: 'DELETE'
             }).then(result => {
                 return result.json();
             }).then(data => {
 
-                for (let i = 0; i < this.arrayDenuncia.length; i++) {
-                    if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
+                for (let i = 0; i < this.arrayTrabalhe.length; i++) {
+                    if (this.arrayTrabalhe[i].id_trabalhe == id_trabalhe) {
                         console.log('começo')
-                        this.arrayDenuncia.splice(this.arrayDenuncia, 1);
+                        this.arrayTrabalhe.splice(this.arrayTrabalhe, 1);
                         document.location.reload(true);
                     }
                 }
@@ -499,6 +559,85 @@ class Trabalhe {
 
 var trabalhe = new Trabalhe
 
+
+class Login {
+    constructor() {
+        this.arrayLogin = [];
+        this.editId = null
+    }
+    salvar() {
+        let login = this.lerDados();
+
+        if (this.validaCampos(login)) {
+            if (this.editId == null) {
+                this.adicionar(login)
+            }
+        }
+    }
+
+    lerDados() {
+        let login = {}
+
+        login.id = 0;
+        login.email = document.getElementById('email').value;
+        login.password = document.getElementById('password').value
+        return login;
+    }
+    async adicionar(login) {
+        fetch('http://localhost:2000/usuario/login', {
+            method: 'POST',
+            body: JSON.stringify(login),
+            headers:{
+                "Content-type": "application/json; charset=utf-8"
+            }
+
+        }).then(result => {
+            return result.json();
+        }).then(data => {
+            console.log(data)
+
+            login.email = data.email;
+            login.password = data.password;
+
+            this.arrayLogin.push(login);
+            this.salvarToken(data);
+
+        });
+    }
+    salvarToken(data){
+        console.log("passou")
+        let token
+        token = data.token
+        this.entrar(token)
+    }
+    entrar(token){
+        fetch('http://localhost:2000/usuario/login', {
+            headers:{
+                'Authorization': 'Bearer ' + token
+            }
+        }) 
+        window.history.back();
+    }
+
+    validaCampos(login) {
+        let msg = '';
+
+        if (login.email == "") {
+            msg += '- Informe o nome do Produto'
+        }
+        if (login.password == "") {
+            msg += '- Informe o preco do Produto'
+        }
+        if (msg != '') {
+            alert(msg);
+            return false
+        }
+        return true;
+
+    }
+}
+
+var login = new Login
 
 function fMasc(objeto, mascara) {
     obj = objeto

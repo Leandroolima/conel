@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
+const login = require('./middleware/login');
 
 const rotaCadastros = require('./routes/cadastros')
 const rotaDenuncia = require('./routes/denuncia')
 const rotaTrabalhe = require('./routes/trabalhe')
+const rotaUsuario = require('./routes/usuario')
 
 app.use(express.static(__dirname + '/public'))
 
@@ -55,7 +57,7 @@ app.get('/LPT', (req, res) => {
     res.sendFile(__dirname + '/public/paginas/conel_LPT.html');
 })
 
-app.get('/adm/cadastro', (req, res) => {
+app.get('/adm/cadastro', login.obrigatorio, (req, res) => {
     res.sendFile(__dirname + '/public/paginas/adm_cadastro.html')
 })
 
@@ -63,16 +65,21 @@ app.get('/energia', (req , res) => {
     res.sendFile(__dirname + '/public/paginas/como-a-energia-eletrica-chega-em-nossas-casas.html')
 })
 
-app.get('/adm/denuncia', (req, res) => {
+app.get('/adm/denuncia',login.obrigatorio, (req, res) => {
     res.sendFile(__dirname + '/public/paginas/adm_denuncia.html')
 })
 
-app.get('/adm/trabalhe', (req, res) => {
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + '/public/paginas/login.html')
+})
+
+app.get('/adm/trabalhe', login.obrigatorio, (req, res) => {
     res.sendFile(__dirname + '/public/paginas/adm_trabalhe.html')
 })
 
 app.use('/denuncias', rotaDenuncia);
 app.use('/cadastros', rotaCadastros);
 app.use('/trabalhe', rotaTrabalhe);
+app.use('/usuario', rotaUsuario);
 
 module.exports = app
