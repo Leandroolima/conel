@@ -88,3 +88,5 @@ app.use('/trabalhe', rotaTrabalhe);
 app.use('/usuario', rotaUsuario);
 
 module.exports = app
+
+//ok
