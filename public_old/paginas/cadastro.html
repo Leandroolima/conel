@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/kuro.css">
+    <link rel="stylesheet" href="../css/kuro_mob.css">
+    <script src="../js/script.js"></script>
+    <link rel="icon" type="image/png" href="../img/favicon-96x96.ico"/>
+    <title>Conel</title>
+</head>
+
+<body>
+    <div class="row-1 cor-menu">
+        <div class="principal">
+            <div class="row-1">
+                <div class="col-12 inicio">
+                    <div class="row-1">
+                        <div class="col-2 logo">
+                            <a href="/"><img src="../img/LogoConel1.png"></a>
+                        </div>
+                        <div class="col-10 home">
+                            <div class="row-1">
+                                <div class="class-12">
+                                    <div class="class-8">
+                                        <ul>
+                                            <li><a href="/trabalhe_conel" id="pesquisa1">Trabalhe na Conel</a></li>
+                                            <li><a href="/cadastro" id="pesquisa2">Cadastro de Fornecedores</a></li>
+                                            <li><a href="/contato" id="pesquisa3">Fale Conosco</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="class-4 barra-pesquisa">
+                                        <input type="search" id="pesquisar" placeholder="Buscar">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-1 cor-menu2">
+        <div class="principal">
+            <div class="col-12 barra">
+                <ul>
+                    <li><a href="/nossa_politica" id="links1">NOSSA POLÍTICA</a></li>
+                    <li><a href="/o_que_fazemos" id="links2">O QUE FAZEMOS</a></li>
+                    <li><a href="/fique_por_dentro" id="links3">FIQUE POR DENTRO</a></li>
+                    <li><a href="/fornecedores" id="links4">RELAÇÃOES COM <br>FORNECEDORES</a></li>
+                    <li><a href="/denuncia" id="links5">CANAL DE<br>
+                            DENÚNCIAS</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row-1 maos ">
+        <div class="principal">
+            <div class="col-12">
+                <p id="texto">CADASTRO DE <br>
+                    FORNECEDORES</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="principal">
+        <div class="row-1">
+            <div class="card ">
+                <div class="laneInput">
+                    <label id="cadastro-informacoes">Razão Social</label>
+                    <input type="text" id="razao_social" placeholder="INSIRA A RAZÃO SOCIAL">
+                </div>
+                <div class="laneInput">
+                    <label id="cadastro-informacoes">CNPJ</label>
+                    <input type="text" id="cnpj" maxlength="18" placeholder="INSIRA O CNPJ" onkeydown="javascript: fMasc( this, mCNPJ );" name="cnpj">
+                </div>
+                <div class="laneInput">
+                    <label id="cadastro-informacoes">ENDEREÇO</label>
+                    <input type="text" id="endereco" placeholder="INSIRA O ENDEREÇO">
+                </div>
+                <div class="row-1">
+                    <div class="col-12">
+                        <div class="row-1">
+                            <div class="col-6 inlaneInput">
+                                <div class="row-1">
+                                    <div class="col-12">
+                                        <div class="col-6 cep">
+                                            <label id="cadastro-informacoes">CEP</label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input onblur="completar()" maxlength="10" type="text" id="cep" onkeydown="javascript: fMasc( this, mCEP );" name="cep" placeholder="INSIRA O CEP">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 inlaneInput">
+                                <div class="row-1">
+                                    <div class="col-12">
+                                        <div class="col-6 bairro">
+                                            <label id="cadastro-informacoes-bairro">BAIRRO</label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="text" id="bairro" placeholder="INSIRA O BAIRRO">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-1">
+                    <div class="col-12">
+                        <div class="row-1">
+                            <div class="col-6 inlaneInput">
+                                <div class="row-1">
+                                    <div class="col-12">
+                                        <div class="col-6">
+                                            <label id="cadastro-informacoes">ESTADO</label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="text" id="estado" placeholder="INSIRA O ESTADO">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-6 inlaneInput">
+                                <div class="row-1">
+                                    <div class="col-12">
+                                        <div class="col-6">
+                                            <label id="cadastro-informacoes">CIDADE</label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="text" id="cidade" placeholder="INSIRA A CIDADE">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-1">
+                    <div class="col-12">
+                        <div class="row-1">
+                            <div class="col-6 inlaneInput">
+                                <div class="row-1">
+                                    <div class="col-12">
+                                        <div class="col-6">
+                                            <label id="cadastro-informacoes">TELEFONE1</label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input maxlength="14" type="text" id="telefone1" onkeydown="javascript: fMasc( this, mTel );" name="tel" placeholder="INSIRA O TELEFONE">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-6 inlaneInput">
+                                <div class="row-1">
+                                    <div class="col-12">
+                                        <div class="col-6 telefone2">
+                                            <label id="cadastro-informacoes">TELEFONE2</label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input maxlength="14" type="text" id="telefone2" onkeydown="javascript: fMasc( this, mTel );" name="tel" placeholder="(OPCIONAL)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="laneInput tooltip ">
+                    <label id="cadastro-informacoes">EMAIL</label>
+                    <input type="text" id="email" name="email" onblur="checarEmail()"  maxlength="60" placeholder="INSIRA O EMAIL" ><p id="tooltiptext">E-mail invalido</p>
+                </div>
+
+                <div class="laneInput">
+                    <label id="cadastro-informacoes">INSCRIÇÃO ESTADUAL</label>
+                    <input type="text" id="inscricao_estadual" placeholder="INSIRA A INSCRIÇÃO ESTADUAL">
+                </div>
+                <div class="row-1">
+                    <div class="class-12 arquivo1">
+                        <div class="inlaneInput">
+                            <label class="custom-file-upload" id="arquivo">
+                                <input type="file" id="arquivo " accept=" .pdf, .docx, .doc, .xlsx">
+                            </label>
+
+                            <label id="cadastro-informacoes">ANEXAR AQUI SUA PROPOSTA</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="botao-cadastro" onclick="cadastro.salvar()">Cadastrar</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="row-1 cor-final">
+        <div class="principal">
+            <div class="col-12">
+                <div class="row-1">
+                    <div class="col-4 side-bar">
+                        <ul>
+                            <li><a href="/nossa_politica" id="links10">NOSSA POLÍTICA</a></li>
+                            <li><a href="/o_que_fazemos" id="links9">O QUE FAZEMOS</a></li>
+                            <li><a href="/fique_por_dentro" id="links8">FIQUE POR DENTRO</a></li>
+                            <li><a href="/fornecedores" id="links7">RELAÇÃOES COM <br>FORNECEDORES</a></li>
+                            <li><a href="/denuncia" id="links6">CANAL DE<br>DENÚNCIAS</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-4 side-bar">
+                        <ul>
+                            <li><a href="/trabalhe_conel" id="links11">TRABALHE NA CONEL</a></li>
+                            <li><a href="/cadastro" id="links12">CADASTRO<br>DE FORNECEDORES</a></li>
+                            <li><a href="/contato" id="links13">FALE CONOSCO</a></li>
+                            <li><a href="/dashboard" id="links12"> ADM </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 side-bar">
+                        <ul>
+                            <li id="links11">REDES SOCIAIS</li>
+                            <li><a href="https://www.instagram.com/conelconstrucoes/"><img src="../img/instagram.png" id="redes-sociais"><img src="../img/instagram_1.png" id="redes-sociais-hover"></a></li>
+                            <li><a href=""><img src="../img/facebook_1.png" id="redes-sociais"><img src="../img/facebook.png" id="redes-sociais-hover"></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 ">
+                <div class="row-1">
+                    <li id="localizacao">LOCALAIZAÇÃO: SANTO ANTÔNIO DE JESUS - BA. RUA COSME DE FARIAS, 93, CENTRO. CEP
+                        44572-052</li>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
