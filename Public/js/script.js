@@ -25,15 +25,12 @@ class Cadastro {
         }).then(result => {
             return result.json();
         }).then(data => {
-            console.log(data);
             data.cadastrado.forEach(prd => {
                 this.arrayCadastros.push(prd);
             });
 
-            console.log(this.arrayCadastros);
             let tbody = document.getElementById('tbody')
             tbody.innerText = ''
-            console.log(this.arrayCadastros.length)
             for (let i = 0; i < this.arrayCadastros.length; i++) {
                 let tr = tbody.insertRow();
 
@@ -73,7 +70,13 @@ class Cadastro {
                 imgVisualizar.setAttribute("onclick", "cadastro.visualizar(" + this.arrayCadastros[i].id_cadastrado + ")")
                 imgVisualizar.classList.add("icon-3")
 
+                let imgExcluir = document.createElement('img');
+                imgExcluir.src = '../img/x.png'
+                imgExcluir.setAttribute("onclick", "cadastro.excluir(" + this.arrayCadastros[i].id_cadastrado + ")")
+                imgExcluir.classList.add("icon-3")
+
                 td_acoes.appendChild(imgVisualizar)
+                td_acoes.appendChild(imgExcluir)
             }
         });
 
@@ -169,8 +172,6 @@ class Cadastro {
         if (cadastro.telefone1 == "") {
             msg += '- Informe o Telefone1'
         }
-        console.log('passei')
-        console.log(checarEmail)
         if (cadastro.email != checarEmail()) {
             msg += '- Informe o Email'
         }
@@ -191,10 +192,8 @@ class Cadastro {
     async visualizar(id_cadastrado) {
         fetch('http://localhost:2000/cadastros/' + id_cadastrado)
             .then(result => {
-                console.log(result)
                 return result.json()
             }).then(data => {
-                console.log(data)
                 for (let i = 0; i < this.arrayCadastros.length; i++) {
                     if (this.arrayCadastros[i].id_cadastrado == id_cadastrado) {
                         window.location.assign("http://localhost:2000" + data.cadastrado.arquivo)
@@ -203,6 +202,23 @@ class Cadastro {
                 }
             });
 
+    }
+    async excluir(id_cadastrado){
+        if (confirm('Deseja realmente deletar a denuncia N ' + id_cadastrado)) {
+            fetch('http://localhost:2000/cadastros/' + id_cadastrado, {
+                method: 'DELETE'
+            }).then(result => {
+                return result.json();
+            }).then(data => {
+
+                for (let i = 0; i < this.arrayCadastros.length; i++) {
+                    if (this.arrayCadastros[i].id_cadastrado == id_cadastrado) {
+                        this.arrayCadastros.splice(this.arrayCadastros, 1);
+                        document.location.reload(true);
+                    }
+                }
+            })
+        }
     }
 }
 
@@ -236,12 +252,10 @@ class Denuncia {
         }).then(result => {
             return result.json();
         }).then(data => {
-            console.log(data);
             data.cadastrado.forEach(prd => {
                 this.arrayDenuncia.push(prd);
             });
 
-            console.log(this.arrayDenuncia.length)
             for (let i = 0; i < this.arrayDenuncia.length; i++) {
 
                 let buttonaccodeon = document.createElement('button');
@@ -346,13 +360,10 @@ class Denuncia {
 
     }
     async visualizar(id_denuncia) {
-        console.log(id_denuncia)
         fetch('http://localhost:2000/denuncias/' + id_denuncia)
             .then(result => {
-                console.log(result)
                 return result.json()
             }).then(data => {
-                console.log(data)
                 for (let i = 0; i < this.arrayDenuncia.length; i++) {
                     if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
                         window.location.assign("http://localhost:2000" + data.cadastrado.arquivo)
@@ -372,7 +383,6 @@ class Denuncia {
 
                 for (let i = 0; i < this.arrayDenuncia.length; i++) {
                     if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
-                        console.log('começo')
                         this.arrayDenuncia.splice(this.arrayDenuncia, 1);
                         document.location.reload(true);
                     }
@@ -423,12 +433,9 @@ class Trabalhe {
         }).then(result => {
             return result.json();
         }).then(data => {
-            console.log(data);
             data.cadastrado.forEach(prd => {
                 this.arrayTrabalhe.push(prd);
             });
-
-            console.log(this.arrayTrabalhe.length)
             for (let i = 0; i < this.arrayTrabalhe.length; i++) {
 
                 let buttonaccodeon = document.createElement('button');
@@ -521,13 +528,10 @@ class Trabalhe {
 
     }
     async visualizar(id_trabalhe) {
-        console.log(id_trabalhe)
         fetch('http://localhost:2000/trabalhe/' + id_trabalhe)
             .then(result => {
-                console.log(result)
                 return result.json()
             }).then(data => {
-                console.log(data)
                 for (let i = 0; i < this.arrayTrabalhe.length; i++) {
                     if (this.arrayTrabalhe[i].id_trabalhe == id_trabalhe) {
                         window.location.assign("http://localhost:2000" + data.cadastrado.arquivo)
@@ -547,7 +551,6 @@ class Trabalhe {
 
                 for (let i = 0; i < this.arrayTrabalhe.length; i++) {
                     if (this.arrayTrabalhe[i].id_trabalhe == id_trabalhe) {
-                        console.log('começo')
                         this.arrayTrabalhe.splice(this.arrayTrabalhe, 1);
                         document.location.reload(true);
                     }
@@ -594,7 +597,6 @@ class Login {
         }).then(result => {
             return result.json();
         }).then(data => {
-            console.log(data)
 
             login.email = data.email;
             login.password = data.password;
@@ -605,7 +607,6 @@ class Login {
         });
     }
     salvarToken(data){
-        console.log("passou")
         let token
         token = data.token
         this.entrar(token)
@@ -693,13 +694,10 @@ const options = {
 
 function completar() {
     const cep = document.getElementById("cep")
-    // let Cep = document.getElementById("cep").value;
-    //  console.log(Cep)
     let search = cep.value.replace("-", "")
     search = search.replace(".", "")
     fetch(`https://viacep.com.br/ws/${search}/json/`, options).then((response) => {
         response.json().then(data => {
-            console.log(data)
             document.getElementById("bairro").value = data.bairro;
             document.getElementById("cidade").value = data.localidade;
             document.getElementById("endereco").value = data.logradouro;
@@ -720,7 +718,6 @@ function enviar() {
         "logradouro": logradouro,
         "uf": uf,
     }
-    console.log(json)
 }
 
 function checarEmail() {
@@ -730,13 +727,34 @@ function checarEmail() {
         || document.getElementById('email').value.indexOf('@') == -1
         || document.getElementById('email').value.indexOf('.') == -1) {
         document.getElementById("tooltiptext").style.opacity = "1";
-        console.log(checar)
+
         return checar = 17;
     } else {
         document.getElementById("tooltiptext").style.opacity = "0";
-        console.log("aqui")
-        console.log(checar)
         return checar
     }
+}
+
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search");
+
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();
+});
+
+searchBtn.addEventListener("click", ()=>{ 
+  sidebar.classList.toggle("open");
+  menuBtnChange(); 
+});
+
+
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+ }
 }
 

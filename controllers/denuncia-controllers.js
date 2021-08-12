@@ -94,7 +94,7 @@ exports.deleteDenuncia = async(req, res, next) => {
                 id_denuncia: req.params.id_denuncia,
                 tipo: 'POST',
                 descricao: 'Insere um produto',
-                url: 'http://localhost:3000/produtos',
+                url: URL_API + "/denuncia",
                 body: {
                     nome: 'String',
                     preco: 'Number'

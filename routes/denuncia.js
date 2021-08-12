@@ -13,15 +13,7 @@ const storeg = multer.diskStorage({
         cb(null,file.originalname)
     }
 })
-/*const fileFilter = (req, file, cb) =>{
 
-    if (file.mimetype === 'image/jpeg'  || file.mimetype === 'image/png' || file.mimetype === 'application/pdf'){
-   
-        cb(null, true);
-    }else{
-        cb(null, false)
-    }
-}*/
 const upload = multer({ 
     storage: storeg,
 });
@@ -30,6 +22,6 @@ const upload = multer({
 router.post('/', upload.single('arquivo'), denunciaControllers.postDenuncia);
 router.get('/', denunciaControllers.getDenuncia)
 router.get('/:id_denuncia', denunciaControllers.getUmaDenuncia)
-router.delete('/:id_denuncia',login.obrigatorio, denunciaControllers.deleteDenuncia)
+router.delete('/:id_denuncia', denunciaControllers.deleteDenuncia)
 
 module.exports = router

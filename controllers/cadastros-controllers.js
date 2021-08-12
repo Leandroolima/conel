@@ -55,7 +55,6 @@ exports.getCadastro = async (req, res, next) => {
         const result = await mysql.execute('SELECT * FROM cadastro_fornecedores');
 
         const response = {
-            mensagem: 'Fornecedor cadastrado com sucesso',
             cadastrado: result.map(cadastrado => {
                 return{
                     id_cadastrado: cadastrado.id_cadastrado,
@@ -118,5 +117,29 @@ exports.getUmCadastro = async (req, res, next) => {
     } catch (error) {
         console.log(error)
         return res.status(500).send({ error: error })
+    }
+}
+exports.deleteCadastro = async(req, res, next) => {
+    try {
+        const query =  "DELETE FROM cadastro_fornecedores WHERE id_cadastrado = ?"
+        await mysql.execute(query, [req.params.id_cadastrado])
+
+        const response = {
+            mensagem: 'Cadastro removido com sucesso',
+            request: {
+                id_cadastrado: req.params.id_cadastrado,
+                tipo: 'DELETE',
+                descricao: 'Insere um produto',
+                url: URL_API + "/cadastros",
+                body: {
+                    nome: 'String',
+                    preco: 'Number'
+                }
+            }
+        }
+        res.status(202).send(response)
+
+    } catch (error) {
+        return res.status(500).send({ error: error });
     }
 }

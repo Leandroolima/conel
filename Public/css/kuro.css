@@ -85,6 +85,9 @@
             text-decoration: none;
             color: #F2EDED;
         }
+        .home li a:hover{
+          color:   #DFDD26;
+        }
     .logo{
         margin-left: 65px;
         margin-top: 12px;
@@ -107,6 +110,9 @@
     .barra li a{
         text-decoration: none;
         color: #F2EDED;
+    }
+    .barra li a:hover{
+        color:   #DFDD26;
     }
     .cor-menu{
         background-color: #2093D6
@@ -327,6 +333,9 @@
         height: 34px;
         cursor: pointer;
         margin-bottom: 92px;
+    }
+    #botao-cadastro:hover{
+        background-color: #5a5904;
     }
     .imgpri{
        width: 100%;
@@ -668,6 +677,9 @@ NOSSA POLÍTICA */
 .side-bar li a{
     text-decoration: none;
     color: #F2EDED;
+}
+.side-bar li a:hover{
+    color: #DFDD26;
 }
 .side-bar{
     margin-top: 74px;
@@ -1709,6 +1721,9 @@ border-radius: 50px;
     font-size: 24px;
     line-height: 28px;
 }
+#botao-enviar-trabalhe:hover{
+    background-color: #6e6d04;
+}
 .foto-de-entrada-denuncia{
     background-image: url(../img/business-people-fill-resume-application-information-desk-presents-ability-company-agree-with-position-job1.png);
     background-repeat: no-repeat;
@@ -1830,6 +1845,7 @@ border-radius: 50px;
     border-radius: 50px;
     width: 1280px;
     height: 1628px;
+    margin-left: 33px;
 }
 .texto-bloco{
     font-family: 'exo_2light';
@@ -1882,7 +1898,8 @@ border-radius: 50px;
 table {
     border-collapse: collapse;
     border: 2px solid #00578A;
-    width: 100%;
+    width: 95%;
+    margin-left: 70px;
 }
 
 table th{
@@ -1952,6 +1969,8 @@ header{
     outline: none;
     font-size: 15px;
     transition: 0.4s;
+    width: 95%;
+    margin-left: 76px;
   }
   
   .active, .accordion:hover {
@@ -1975,6 +1994,10 @@ header{
       font-family:  'exo_2light';
       margin-left: 5px;
   }
+  #descricao_denuncia{
+    font-family:  'exo_2light';
+    margin-left: 67px;
+  }
   #texto-denuncia-2{
     font-family:  'exo_2light';
     margin-left: 158px;
@@ -1982,6 +2005,20 @@ header{
   #denuncia_numero{
     font-family:  'exo_2light';
     margin-left: 16px;
+  }
+  #redes-sociais{
+      width: 90px;
+      z-index: -2;
+      opacity: 1;
+  }
+  #redes-sociais-hover{
+      width: 90px;
+      margin-left: -90px;
+      z-index: 2;
+      cursor: pointer;
+  }
+  #redes-sociais-hover:hover{
+      opacity: 0;
   }
   .icon-1{
     width: 40px;
@@ -2000,7 +2037,7 @@ header{
     cursor: pointer;
     width: 30px;
   }
-}
+
 
 .slideOutUp:hover {
     -webkit-animation-name: slideOutUp;
@@ -2031,5 +2068,7 @@ header{
         -webkit-transform: translateY(-20%);
         transform: translateY(-20%);
         }
+        
     } 
 
+}

@@ -13,15 +13,7 @@ const storeg = multer.diskStorage({
         cb(null,file.originalname)
     }
 })
-/*const fileFilter = (req, file, cb) =>{
 
-    if (file.mimetype === 'image/jpeg' || file.mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'  ||  file.mimetype === 'application/pdf' || file.mimetype === 'application/msword' || file.mimetype === 'application/vnd.ms-powerpoint' ){
-   
-        cb(null, true);
-    }else{
-        cb(null, false)
-    }
-}*/
 const upload = multer({ 
     storage: storeg
 });
@@ -30,6 +22,7 @@ const upload = multer({
 router.post('/', upload.single('arquivo'), cadastrosController.postCadastro);
 router.get('/', cadastrosController.getCadastro);
 router.get('/:id_cadastrado', cadastrosController.getUmCadastro);
+router.delete('/:id_cadastrado', cadastrosController.deleteCadastro)
 
 
 module.exports = router
