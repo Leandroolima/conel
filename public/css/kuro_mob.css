@@ -167,7 +167,6 @@
         background-image: url(../img/business-people-handshake-on-city1.png);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
     }
     #texto{
         font-family: 'exo_2light';
@@ -406,11 +405,11 @@
     width: 100%;
     margin-top: 105px;
     opacity: 100%;
-    background-size: cover;
+
     background-image: url('../img/power-lines-in-field-on-sunrise-background3.png');
     }
 .imgLaranja{
-    background-size: cover;
+
     background-image: url('../img/display-laranja1.png');
     width: 1350px;
     height: 300px;
@@ -434,11 +433,11 @@
     width: 100%;
     margin-top: 105px;
     opacity: 100%;
-    background-size: cover;
+
     background-image: url('../img/hands-joined-by-the-team1.png');
     }
 .imgverde{
-    background-size: cover;
+
     background-image: url('../img/display-verde1.png');
     width: 1350px;
     height: 300px;
@@ -1604,7 +1603,7 @@ border-radius: 50px;
     background-image: url(../img/businessman-hand-holding-smart-phone-with-icon-mobile-phone-mail-telephone-and-address-customer-service-call-center-contact-us-concept1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+
 }
 #texto-2{
     font-family: 'exo_2light';
@@ -1662,7 +1661,7 @@ border-radius: 50px;
     background-image: url(../img/close-up-photography-of-light-bulb1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+
 }
 .barrinha{
     background: #006EAF;
@@ -1718,7 +1717,7 @@ border-radius: 50px;
     background-image: url(../img/business-people-fill-resume-application-information-desk-presents-ability-company-agree-with-position-job1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+
 }
 .barrinha-verde{
     background: #DFDD26;
@@ -1817,7 +1816,7 @@ border-radius: 50px;
     background-image: url(../img/capaa1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+
 }
 .texto-3{
     font-family: 'exo_2light';

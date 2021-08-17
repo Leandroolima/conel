@@ -166,22 +166,25 @@
         color: black;
         margin-left: 30px;
        }
-    .maos{
+    .main-photo{
         background-image: url(../img/business-people-handshake-on-city1.png);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
     }
-    #texto{
+    .heading{
         font-family: 'exo_2light';
         font-weight: bold;
         font-size: 72px;
-        margin-top: 62px;
-        margin-left: 72px;
+        margin-top: 140px;
+        margin-left: 320px;
         line-height: 86px;
-        margin-bottom: 62px;
+        margin-bottom: -15px;
         color: #fff;
-        text-shadow: 1px 0 0 black, 1px 0 0 black, 0 1px 0 black, 0 1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;;
+        text-shadow: 1px 0 0 black, 1px 0 0 black, 0 1px 0 black, 0 1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    }
+    .heading-denuncia{
+        margin-left: 403px;
+        margin-bottom: 32px;
     }
     .laneInput{
         display: grid;
@@ -412,18 +415,14 @@
     width: 100%;
     margin-top: 105px;
     opacity: 100%;
-    background-size: cover;
     background-image: url('../img/power-lines-in-field-on-sunrise-background3.png');
     }
 .imgLaranja{
-    background-size: cover;
     background-image: url('../img/display-laranja1.png');
     width: 1350px;
     height: 300px;
     left: -5px;
     top: 1275px;
-
-
 }
 .aconel{
     font-family: 'robotoregular';
@@ -440,18 +439,14 @@
     width: 100%;
     margin-top: 105px;
     opacity: 100%;
-    background-size: cover;
     background-image: url('../img/hands-joined-by-the-team1.png');
     }
 .imgverde{
-    background-size: cover;
     background-image: url('../img/display-verde1.png');
     width: 1350px;
     height: 300px;
     left: -5px;
     top: 1275px;
-
-
 }
 .final{
     background-color: #2093D6;
@@ -1611,7 +1606,6 @@ border-radius: 50px;
     background-image: url(../img/businessman-hand-holding-smart-phone-with-icon-mobile-phone-mail-telephone-and-address-customer-service-call-center-contact-us-concept1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
 }
 #texto-2{
     font-family: 'exo_2light';
@@ -1669,7 +1663,6 @@ border-radius: 50px;
     background-image: url(../img/close-up-photography-of-light-bulb1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
 }
 .barrinha{
     background: #006EAF;
@@ -1728,7 +1721,6 @@ border-radius: 50px;
     background-image: url(../img/business-people-fill-resume-application-information-desk-presents-ability-company-agree-with-position-job1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
 }
 .barrinha-verde{
     background: #DFDD26;
@@ -1827,7 +1819,6 @@ border-radius: 50px;
     background-image: url(../img/capaa1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
 }
 .texto-3{
     font-family: 'exo_2light';
@@ -1918,10 +1909,12 @@ table td img {
 }
 header{
     background-color: #2093D6 ;
-    padding: 10px;
     color: #fff;
     text-align: center;
     font-family: 'exo_2light';
+}
+.header-cadastro{
+    background-color: #fff;
 }
 
 .center{
@@ -2018,6 +2011,9 @@ header{
       cursor: pointer;
   }
   #redes-sociais-hover:hover{
+      opacity: 0;
+  }
+  #redes-sociais:hover{
       opacity: 0;
   }
   .icon-1{
