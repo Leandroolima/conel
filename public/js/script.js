@@ -609,7 +609,9 @@ class Login {
     salvarToken(data){
         let token
         token = data.token
+        console.log(token)
         this.entrar(token)
+       
     }
     entrar(token){
         fetch('http://localhost:2000/usuario/login', {
@@ -617,7 +619,7 @@ class Login {
                 'Authorization': 'Bearer ' + token
             }
         }) 
-        window.history.back();
+        //window.history.back();
     }
 
     validaCampos(login) {

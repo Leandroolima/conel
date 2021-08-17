@@ -7,8 +7,8 @@ exports.obrigatorio = (req, res, next) => {
         req.usuario = decode;
         next()
     } catch (error) {
-        //return res.status(401).send({ mensagem: 'Falha na autenticação'})
-        return res.status(401).redirect("/login")
+        return res.status(401).send({ mensagem: 'Falha na autenticação'})
+        //return res.status(401).redirect("/login")
         
     }
 }
