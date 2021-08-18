@@ -4,7 +4,7 @@ const app = express();
 const login = require('./middleware/login');
 
 const fs = require('fs');
-const dir = "C:/laragon/www/conel/public/uploads";
+const dir = process.env.PWD+"/uploads";
 
 //Verifica se não existe
 if (!fs.existsSync(dir)){
