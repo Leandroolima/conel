@@ -18,7 +18,7 @@ class Cadastro {
     }
 
     async listaTabela() {
-        fetch('35.232.172.68:2000/cadastros', {
+        fetch('/cadastros', {
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             }
@@ -121,7 +121,7 @@ class Cadastro {
         formData.append('inscricao_estadual', cadastro.inscricao_estadual)
         formData.append('arquivo', fileField.files[0]);
 
-        fetch('35.232.172.68:2000/cadastros', {
+        fetch('/cadastros', {
             method: 'POST',
             body: formData,
 
@@ -190,13 +190,13 @@ class Cadastro {
 
     }
     async visualizar(id_cadastrado) {
-        fetch('35.232.172.68:2000/cadastros/' + id_cadastrado)
+        fetch('/cadastros/' + id_cadastrado)
             .then(result => {
                 return result.json()
             }).then(data => {
                 for (let i = 0; i < this.arrayCadastros.length; i++) {
                     if (this.arrayCadastros[i].id_cadastrado == id_cadastrado) {
-                        window.location.assign("35.232.172.68:2000/" + data.cadastrado.arquivo)
+                        window.location.assign("cadastros/" + data.cadastrado.arquivo)
 
                     }
                 }
@@ -205,7 +205,7 @@ class Cadastro {
     }
     async excluir(id_cadastrado){
         if (confirm('Deseja realmente deletar a denuncia N ' + id_cadastrado)) {
-            fetch('35.232.172.68:2000/cadastros/' + id_cadastrado, {
+            fetch('/cadastros/' + id_cadastrado, {
                 method: 'DELETE'
             }).then(result => {
                 return result.json();
@@ -245,7 +245,7 @@ class Denuncia {
     }
     async listaDenuncia() {
 
-        fetch('35.232.172.68:2000/denuncias', {
+        fetch('/denuncias', {
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             }
@@ -326,7 +326,7 @@ class Denuncia {
         formData.append('data_denuncia', denuncia.data_denuncia);
         formData.append('arquivo', fileField.files[0]);
 
-        fetch('35.232.172.68:2000/denuncias', {
+        fetch('/denuncias', {
             method: 'POST',
             body: formData,
 
@@ -360,13 +360,13 @@ class Denuncia {
 
     }
     async visualizar(id_denuncia) {
-        fetch('35.232.172.68:2000/denuncias/' + id_denuncia)
+        fetch('/denuncias/' + id_denuncia)
             .then(result => {
                 return result.json()
             }).then(data => {
                 for (let i = 0; i < this.arrayDenuncia.length; i++) {
                     if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
-                        window.location.assign("35.232.172.68:2000/" + data.cadastrado.arquivo)
+                        window.location.assign("denuncias/" + data.cadastrado.arquivo)
 
                     }
                 }
@@ -375,7 +375,7 @@ class Denuncia {
     }
     async excluir(id_denuncia){
         if (confirm('Deseja realmente deletar a denuncia N ' + id_denuncia)) {
-            fetch('35.232.172.68:2000/denuncias/' + id_denuncia, {
+            fetch('/denuncias/' + id_denuncia, {
                 method: 'DELETE'
             }).then(result => {
                 return result.json();
@@ -426,7 +426,7 @@ class Trabalhe {
     }
     async listaTrabalhe() {
 
-        fetch('35.232.172.68:2000/trabalhe', {
+        fetch('/trabalhe', {
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             }
@@ -494,7 +494,7 @@ class Trabalhe {
         formData.append('data_curriculo', trabalhe.data_curriculo);
         formData.append('arquivo', fileField.files[0]);
 
-        fetch('35.232.172.68:2000/trabalhe', {
+        fetch('/trabalhe', {
             method: 'POST',
             body: formData,
 
@@ -528,13 +528,13 @@ class Trabalhe {
 
     }
     async visualizar(id_trabalhe) {
-        fetch('35.232.172.68:2000/trabalhe/' + id_trabalhe)
+        fetch('/trabalhe/' + id_trabalhe)
             .then(result => {
                 return result.json()
             }).then(data => {
                 for (let i = 0; i < this.arrayTrabalhe.length; i++) {
                     if (this.arrayTrabalhe[i].id_trabalhe == id_trabalhe) {
-                        window.location.assign("35.232.172.68:2000/" + data.cadastrado.arquivo)
+                        window.location.assign("trabalhe/" + data.cadastrado.arquivo)
 
                     }
                 }
@@ -543,7 +543,7 @@ class Trabalhe {
     }
     async excluir(id_trabalhe){
         if (confirm('Deseja realmente deletar o curriculo N ' + id_trabalhe)) {
-            fetch('35.232.172.68:2000/trabalhe/' + id_trabalhe, {
+            fetch('/trabalhe/' + id_trabalhe, {
                 method: 'DELETE'
             }).then(result => {
                 return result.json();
@@ -587,7 +587,7 @@ class Login {
         return login;
     }
     async adicionar(login) {
-        fetch('35.232.172.68:2000/usuario/login', {
+        fetch('/usuario/login', {
             method: 'POST',
             body: JSON.stringify(login),
             headers:{
@@ -614,7 +614,7 @@ class Login {
        
     }
     entrar(token){
-        fetch('35.232.172.68:2000/usuario/login', {
+        fetch('/usuario/login', {
             headers:{
                 'Authorization': 'Bearer ' + token
             }
