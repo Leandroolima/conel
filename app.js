@@ -3,6 +3,26 @@ const bodyParser = require('body-parser')
 const app = express();
 const login = require('./middleware/login');
 
+const fs = require('fs');
+const dir = "C:/laragon/www/conel/public/uploads";
+
+//Verifica se não existe
+if (!fs.existsSync(dir)){
+    console.log('entrou')
+    //Efetua a criação do diretório
+    fs.mkdir(dir, (err) => {
+        if (err) {
+            console.log("Deu ruim...");
+            return
+        }
+
+        console.log("Diretório criado! =)")
+    });
+}else{
+    console.log('existe')
+}
+
+
 const rotaCadastros = require('./routes/cadastros')
 const rotaDenuncia = require('./routes/denuncia')
 const rotaTrabalhe = require('./routes/trabalhe')
