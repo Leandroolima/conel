@@ -196,7 +196,7 @@ class Cadastro {
             }).then(data => {
                 for (let i = 0; i < this.arrayCadastros.length; i++) {
                     if (this.arrayCadastros[i].id_cadastrado == id_cadastrado) {
-                        window.location.assign("35.232.172.68:2000" + data.cadastrado.arquivo)
+                        window.location.assign("35.232.172.68:2000/" + data.cadastrado.arquivo)
 
                     }
                 }
@@ -366,7 +366,7 @@ class Denuncia {
             }).then(data => {
                 for (let i = 0; i < this.arrayDenuncia.length; i++) {
                     if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
-                        window.location.assign("35.232.172.68:2000" + data.cadastrado.arquivo)
+                        window.location.assign("35.232.172.68:2000/" + data.cadastrado.arquivo)
 
                     }
                 }
@@ -534,7 +534,7 @@ class Trabalhe {
             }).then(data => {
                 for (let i = 0; i < this.arrayTrabalhe.length; i++) {
                     if (this.arrayTrabalhe[i].id_trabalhe == id_trabalhe) {
-                        window.location.assign("35.232.172.68:2000" + data.cadastrado.arquivo)
+                        window.location.assign("35.232.172.68:2000/" + data.cadastrado.arquivo)
 
                     }
                 }
