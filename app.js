@@ -11,8 +11,11 @@ if (!fs.existsSync(dir)){
     console.log('entrou')
     //Efetua a criação do diretório
     fs.mkdir(dir, (err) => {
+       
         if (err) {
+            console.log(err)
             console.log("Deu ruim...");
+            console.log(dir)
             return
         }
 
