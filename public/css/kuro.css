@@ -420,7 +420,7 @@
 .imgLaranja{
     background-image: url('../img/display-laranja1.png');
     width: 1350px;
-    height: 300px;
+    height: 285px;
     left: -5px;
     top: 1275px;
 }
@@ -444,7 +444,7 @@
 .imgverde{
     background-image: url('../img/display-verde1.png');
     width: 1350px;
-    height: 300px;
+    height: 285px;
     left: -5px;
     top: 1275px;
 }
@@ -1545,6 +1545,94 @@ border-radius: 50px;
 
 
 
+
+/* PROGRAMA LUZ PARA TODOS*/
+.programa-luz-para-todos-2-img{
+
+    width: 100%;
+    height: 380px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 99px;
+    background-image: url('../img/Luz-Para-Todos-11.png');
+}
+.programa-luz-para-todos-2-barra{
+    width: 980px;
+    height: 142px;
+    margin-left: 70px;
+    margin-top: 107px;
+    background: #DFDD26;
+    border-radius: 50px;
+}
+#programa-luz-para-todos-2-textobarra{
+    width: 887px;
+    height: 106px;
+    margin-top: 46px;
+    margin-left: 50px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 110%;
+    color: #000000;
+}
+.programa-luz-para-todos-2-bloco{
+    width: 1225px;
+    height: 2700px;
+    margin-left: 65px;
+    margin-right: 65px;
+    margin-top: 105px;
+    background: #00578A;
+    border-radius: 30px;
+}
+#programa-luz-para-todos-2-texto{
+    width: 1042px;
+    height: 200px;
+    margin-top: 90px;
+    margin-left: 95px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 36px;
+    color: #FFFFFF;
+
+}
+#programa-luz-para-todos-2-texto2{
+    width: 1042px;
+    height: 355px;
+    margin-left: 95px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+#programa-luz-para-todos-2-texto3{
+    width: 1042px;
+    height: 355px;
+    margin-top: 90px;
+    margin-left: 95px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+#programa-luz-para-todos-2-texto4{
+    width: 1042px;
+    margin-top: 10px;
+    margin-left: 95px;
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
 
 
 
