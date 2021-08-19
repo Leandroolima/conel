@@ -195,8 +195,10 @@ class Cadastro {
                 return result.json()
             }).then(data => {
                 for (let i = 0; i < this.arrayCadastros.length; i++) {
+                    console.log("passou aqui")
                     if (this.arrayCadastros[i].id_cadastrado == id_cadastrado) {
-                        window.location.assign( data.cadastrado.arquivo)
+                        console.log(data.cadastrado.arquivo)
+                        window.location.assign(data.cadastrado.arquivo)
 
                     }
                 }
