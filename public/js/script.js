@@ -196,7 +196,7 @@ class Cadastro {
             }).then(data => {
                 for (let i = 0; i < this.arrayCadastros.length; i++) {
                     if (this.arrayCadastros[i].id_cadastrado == id_cadastrado) {
-                        window.location.assign("cadastros/" + data.cadastrado.arquivo)
+                        window.location.assign( data.cadastrado.arquivo)
 
                     }
                 }

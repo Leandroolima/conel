@@ -5,7 +5,7 @@ const login = require('./middleware/login');
 
 const fs = require('fs');
 const dir = process.env.PWD+"/uploads";
-
+/*
 //Verifica se não existe
 if (!fs.existsSync(dir)){
     console.log('entrou')
@@ -24,7 +24,7 @@ if (!fs.existsSync(dir)){
 }else{
     console.log('existe')
 }
-
+*/
 
 const rotaCadastros = require('./routes/cadastros')
 const rotaDenuncia = require('./routes/denuncia')
