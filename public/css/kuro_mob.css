@@ -2000,7 +2000,6 @@ table td img {
 }
 header{
     background-color: #2093D6 ;
-    padding: 10px;
     color: #fff;
     text-align: center;
     font-family: 'exo_2light';
@@ -2095,6 +2094,23 @@ header{
     margin-top: 10px;
     margin-bottom: 5px;
   }
+  #redes-sociais{
+    width: 90px;
+    z-index: -2;
+    opacity: 1;
+}
+#redes-sociais-hover{
+    width: 90px;
+    margin-left: -90px;
+    z-index: 2;
+    cursor: pointer;
+}
+#redes-sociais-hover:hover{
+    opacity: 0;
+}
+#redes-sociais:hover{
+    opacity: 0;
+}
 
 
 .slideOutUp:hover {
