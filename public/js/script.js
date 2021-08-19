@@ -190,7 +190,7 @@ class Cadastro {
 
     }
     async visualizar(id_cadastrado) {
-        fetch('/cadastros/' + id_cadastrado)
+        fetch('/cadastros' + id_cadastrado)
             .then(result => {
                 return result.json()
             }).then(data => {
