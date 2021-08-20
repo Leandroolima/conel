@@ -6,6 +6,6 @@
         "MYSQL_HOST": "127.0.0.1",
         "MYSQL_PORT": 3306,
         "JWT_KEY": "Hashira",
-        "URL_API": "http://localhots:3000/"
+        "URL_API": "https://www.conelenergia.com.br/"
     }
 }

@@ -276,7 +276,7 @@ class Denuncia {
                 });
                 document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
                 buttonaccodeon.innerHTML = `<img class="botaoaccordion" src="../img/arrow-card-dash-down.svg"> <span id="denuncia_numero">DENUNCIA Nº </span> <span id="denuncia_numero">${this.arrayDenuncia[i].id_denuncia}</span> 
-                <span id="texto-denuncia-2">DATA DA DENUNCIA: </span> <span id="data_denun">${this.arrayDenuncia[i].data_denuncia}</span>`
+                <span id="texto-denuncia-2">DATA: </span> <span id="data_denun">${this.arrayDenuncia[i].data_denuncia}</span>`
 
                 document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
 
@@ -456,7 +456,7 @@ class Trabalhe {
                 });
                 document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
                 buttonaccodeon.innerHTML = `<img class="botaoaccordion" src="../img/arrow-card-dash-down.svg"> <span id="denuncia_numero">CURRICULO Nº </span> <span id="denuncia_numero">${this.arrayTrabalhe[i].id_trabalhe}</span> 
-                <span id="texto-denuncia-2">DATA DA ENTREGA: </span> <span id="data_denun">${this.arrayTrabalhe[i].data_curriculo}</span>`
+                <span id="texto-denuncia-2">DATA: </span> <span id="data_denun">${this.arrayTrabalhe[i].data_curriculo}</span>`
 
                 document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
 

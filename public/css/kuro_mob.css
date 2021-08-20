@@ -1973,8 +1973,12 @@ border-radius: 50px;
     display: inline-block;
 }
 
+.coluna{
+    display: grid;
+}
+
 .content{
-    margin-top: 15px;
+    margin-top: 1px;
 }
 
 table {
@@ -2003,6 +2007,7 @@ header{
     color: #fff;
     text-align: center;
     font-family: 'exo_2light';
+    font-size: 10px;
 }
 
 .center{
@@ -2044,12 +2049,13 @@ header{
     color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
+    width: 22%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 11px;
     transition: 0.4s;
+    margin-left: 77px;
   }
   
   .active, .accordion:hover {
@@ -2069,26 +2075,32 @@ header{
   #data_denun{
       font-family:  'exo_2light';
       margin-left: 5px;
+      font-size: 10px;
   }
   #data_curriculo{
     display: none;
   }
   #texto-denuncia-2{
     font-family:  'exo_2light';
-    margin-left: 158px;
+    margin-left: 6px;
   }
   #denuncia_numero{
     font-family:  'exo_2light';
-    margin-left: 16px;
+    margin-left: 2px;
+  }
+  #descricao_denuncia{
+    margin-left: 61px;
+    font-size: 10px;
+    font-family:  'exo_2light';
   }
   .icon-1{
-    width: 40px;
+    width: 28px;
     cursor: pointer;
-    margin-left: 556px;
+    margin-left: -384px;
 
   }
   .icon-2{
-    width: 40px;
+    width: 23px;
     cursor: pointer;
     margin-left: 5px;
     margin-top: 10px;
