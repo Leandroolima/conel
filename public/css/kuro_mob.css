@@ -162,10 +162,11 @@
         color: black;
         margin-left: 30px;
        }
-    .maos{
+    .main-photo{
         background-image: url(../img/business-people-handshake-on-city1.png);
         background-repeat: no-repeat;
         background-position: center;
+        width: 360%;
     }
     #texto{
         font-family: 'exo_2light';
@@ -1754,7 +1755,7 @@ border-radius: 50px;
     background-image: url(../img/close-up-photography-of-light-bulb1.png);
     background-repeat: no-repeat;
     background-position: center;
-
+    width: 360%;
 }
 .barrinha{
     background: #006EAF;
@@ -1810,7 +1811,7 @@ border-radius: 50px;
     background-image: url(../img/business-people-fill-resume-application-information-desk-presents-ability-company-agree-with-position-job1.png);
     background-repeat: no-repeat;
     background-position: center;
-
+    width: 360%;
 }
 .barrinha-verde{
     background: #DFDD26;
@@ -2007,6 +2008,22 @@ header{
     text-align: center;
     font-family: 'exo_2light';
     font-size: 10px;
+}
+.heading{
+    font-family: 'exo_2light';
+    font-weight: bold;
+    font-size: 72px;
+    margin-top: 140px;
+    margin-left: 320px;
+    line-height: 86px;
+    margin-bottom: -15px;
+    color: #fff;
+    text-shadow: 1px 0 0 black, 1px 0 0 black, 0 1px 0 black, 0 1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.heading-denuncia{
+    margin-left: 236px;
+    margin-bottom: 32px;
 }
 
 .center{
