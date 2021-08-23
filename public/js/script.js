@@ -365,7 +365,7 @@ class Denuncia {
             }).then(data => {
                 for (let i = 0; i < this.arrayDenuncia.length; i++) {
                     if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
-                        window.location.assign("denuncias/" + data.cadastrado.arquivo)
+                        window.location.assign(data.cadastrado.arquivo)
 
                     }
                 }
