@@ -712,6 +712,10 @@ NOSSA POLÍTICA */
     line-height: 120%;
     color: #000000;
 }
+
+.O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-img:hover{
+    animation: pulse 0.1s ease-in-out forwards;
+}
 .O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-fundo{
     width: 1206px;
     height: 316px;
@@ -723,6 +727,9 @@ NOSSA POLÍTICA */
   
 }
 .O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-img{
+    cursor: pointer;
+    animation: pulse 2s ease-in-out infinite alternate;
+
     width: 665px;
 height: 316px;
 border-radius: 30px;
@@ -771,6 +778,7 @@ background-image: url('../img/45273_luzparatodos2.png');
 height: 316px;
 border-radius: 30px;
 background-image: url('../img/338032.png');
+cursor: pointer;
 }
 #COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-button{
     padding: 10px 15px;
@@ -1961,7 +1969,7 @@ border-radius: 50px;
     height: 293px;
     background: #DFDD26;
     border-radius: 30px;
-    margin-left: -224px;
+    margin-left: -252px;
     margin-top: 312px;
     z-index: -1;
 }
