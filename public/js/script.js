@@ -581,7 +581,7 @@ class Login {
         let login = {}
 
         login.id = 0;
-        login.email = document.getElementById('email').value;
+        login.email = document.getElementById('eemail').value;
         login.password = document.getElementById('password').value
         return login;
     }
