@@ -55,7 +55,6 @@
         .row-1 {width: 100%; display: flex;flex-direction: row;}
 
         .principal{
-            width: 1349px;
             margin: auto;
         }
         .inicio{
@@ -163,10 +162,11 @@
         color: black;
         margin-left: 30px;
        }
-    .maos{
+    .main-photo{
         background-image: url(../img/business-people-handshake-on-city1.png);
         background-repeat: no-repeat;
         background-position: center;
+        width: 360%;
     }
     #texto{
         font-family: 'exo_2light';
@@ -1853,7 +1853,7 @@ border-radius: 50px;
     background-image: url(../img/close-up-photography-of-light-bulb1.png);
     background-repeat: no-repeat;
     background-position: center;
-
+    width: 360%;
 }
 .barrinha{
     background: #006EAF;
@@ -1909,7 +1909,7 @@ border-radius: 50px;
     background-image: url(../img/business-people-fill-resume-application-information-desk-presents-ability-company-agree-with-position-job1.png);
     background-repeat: no-repeat;
     background-position: center;
-
+    width: 360%;
 }
 .barrinha-verde{
     background: #DFDD26;
@@ -2071,8 +2071,12 @@ border-radius: 50px;
     display: inline-block;
 }
 
+.coluna{
+    display: grid;
+}
+
 .content{
-    margin-top: 15px;
+    margin-top: 1px;
 }
 
 table {
@@ -2101,6 +2105,23 @@ header{
     color: #fff;
     text-align: center;
     font-family: 'exo_2light';
+    font-size: 10px;
+}
+.heading{
+    font-family: 'exo_2light';
+    font-weight: bold;
+    font-size: 72px;
+    margin-top: 140px;
+    margin-left: 320px;
+    line-height: 86px;
+    margin-bottom: -15px;
+    color: #fff;
+    text-shadow: 1px 0 0 black, 1px 0 0 black, 0 1px 0 black, 0 1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.heading-denuncia{
+    margin-left: 236px;
+    margin-bottom: 32px;
 }
 
 .center{
@@ -2142,12 +2163,13 @@ header{
     color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
+    width: 79%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 11px;
     transition: 0.4s;
+    margin-left: 77px;
   }
   
   .active, .accordion:hover {
@@ -2160,6 +2182,7 @@ header{
     background-color: white;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    width: 100%;
   }
   #data_denuncia{
       display: none;
@@ -2167,26 +2190,33 @@ header{
   #data_denun{
       font-family:  'exo_2light';
       margin-left: 5px;
+      font-size: 10px;
   }
   #data_curriculo{
     display: none;
   }
   #texto-denuncia-2{
     font-family:  'exo_2light';
-    margin-left: 158px;
+    margin-left: 6px;
   }
   #denuncia_numero{
     font-family:  'exo_2light';
-    margin-left: 16px;
+    margin-left: 2px;
+  }
+  #descricao_denuncia{
+    margin-left: 61px;
+    font-size: 10px;
+    font-family:  'exo_2light';
+    width: 115%;
   }
   .icon-1{
-    width: 40px;
+    width: 28px;
     cursor: pointer;
-    margin-left: 556px;
+    margin-left:  100px;
 
   }
   .icon-2{
-    width: 40px;
+    width: 23px;
     cursor: pointer;
     margin-left: 5px;
     margin-top: 10px;

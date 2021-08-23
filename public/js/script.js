@@ -84,9 +84,6 @@ class Cadastro {
     lerDados() {
         let cadastro = {}
 
-        if (cadastro.arquivo === ".docx") {
-            alert("tipo de arquivo n é aceito")
-        }
         cadastro.id = 0;
         cadastro.razao_social = document.getElementById('razao_social').value;
         cadastro.cnpj = document.getElementById('cnpj').value;
@@ -241,7 +238,7 @@ class Denuncia {
                 this.adicionar(denuncia)
             }
 
-            alert('denuncia realizado')
+            alert('Denuncia Realizada')
             document.location.reload(true);
         }
     }
@@ -276,7 +273,7 @@ class Denuncia {
                 });
                 document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
                 buttonaccodeon.innerHTML = `<img class="botaoaccordion" src="../img/arrow-card-dash-down.svg"> <span id="denuncia_numero">DENUNCIA Nº </span> <span id="denuncia_numero">${this.arrayDenuncia[i].id_denuncia}</span> 
-                <span id="texto-denuncia-2">DATA DA DENUNCIA: </span> <span id="data_denun">${this.arrayDenuncia[i].data_denuncia}</span>`
+                <span id="texto-denuncia-2">DATA: </span> <span id="data_denun">${this.arrayDenuncia[i].data_denuncia}</span>`
 
                 document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
 
@@ -368,7 +365,7 @@ class Denuncia {
             }).then(data => {
                 for (let i = 0; i < this.arrayDenuncia.length; i++) {
                     if (this.arrayDenuncia[i].id_denuncia == id_denuncia) {
-                        window.location.assign("denuncias/" + data.cadastrado.arquivo)
+                        window.location.assign(data.cadastrado.arquivo)
 
                     }
                 }
@@ -411,7 +408,7 @@ class Trabalhe {
             if (this.editId == null) {
                 this.adicionar(trabalhe)
             } 
-            alert('Curriculo cadastrado')
+            alert('Curriculo Cadastrado')
             document.location.reload(true);
         }
     }
@@ -456,7 +453,7 @@ class Trabalhe {
                 });
                 document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
                 buttonaccodeon.innerHTML = `<img class="botaoaccordion" src="../img/arrow-card-dash-down.svg"> <span id="denuncia_numero">CURRICULO Nº </span> <span id="denuncia_numero">${this.arrayTrabalhe[i].id_trabalhe}</span> 
-                <span id="texto-denuncia-2">DATA DA ENTREGA: </span> <span id="data_denun">${this.arrayTrabalhe[i].data_curriculo}</span>`
+                <span id="texto-denuncia-2">DATA: </span> <span id="data_denun">${this.arrayTrabalhe[i].data_curriculo}</span>`
 
                 document.getElementsByClassName("coluna")[0].appendChild(buttonaccodeon);
 
@@ -634,7 +631,7 @@ class Login {
             msg += '- Informe o preco do Produto'
         }
         if (msg != '') {
-            alert(msg);
+             t(msg);
             return false
         }
         return true;
