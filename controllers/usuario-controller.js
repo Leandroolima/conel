@@ -72,11 +72,17 @@ exports.postLogin = async (req, res, next) => {
 exports.getLogin = async (req, res, next) => {
 
     try {
-        const query = `SELECT * FROM usuarios WHERE email = ?`;
+        
+        const token = req.headers.authorization.split(' ')[1];
+        const decode = jwt.verify(token, process.env.JWT_KEY);
+        req.usuario = decode;
+        console.log("passou por aqui")
+        return res.status(201).redirect('/dashboard')
+
 
         
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         return res.status(500).send({ message: 'Falha na autenticação' });
         
     }
