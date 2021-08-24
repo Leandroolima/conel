@@ -104,6 +104,25 @@ app.get('/dashboard',(req, res) => {
     res.sendFile(__dirname + '/public/paginas/dashboard_adm.html')
 })
 
+app.get('/luz_para_todos',(req, res) => {
+    res.sendFile(__dirname + '/public/paginas/programa-luz-para-todos.html')
+})
+app.get('/invencao_lampada',(req, res) => {
+    res.sendFile(__dirname + '/public/paginas/a-invencao-da-lampada-eletrica.html')
+})
+
+app.get('/seguranca', (req, res) => {
+    res.sendFile(__dirname + '/public/paginas/seguranca_de_trabalho.html' )
+})
+
+app.get('/redes', (req, res) => {
+    res.sendFile(__dirname + '/public/paginas/redes_de_distribuicao.html')
+})
+
+app.get('/interesses', (req, res) => {
+    res.sendFile(__dirname + '/public/paginas/grupo_de_interesse.html')
+})
+
 
 app.use('/denuncias', rotaDenuncia);
 app.use('/cadastros', rotaCadastros);

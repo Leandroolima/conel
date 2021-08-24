@@ -422,7 +422,7 @@
     background-image: url('../img/display-laranja1.png');
     width: 1350px;
     height: 285px;
-    left: -5px;
+    margin-left: -1px;
     top: 1275px;
 }
 .aconel{
@@ -446,7 +446,7 @@
     background-image: url('../img/display-verde1.png');
     width: 1350px;
     height: 285px;
-    left: -5px;
+    margin-left: -1px;
     top: 1275px;
 }
 .final{
@@ -716,6 +716,7 @@ NOSSA POLÍTICA */
     font-size: 27.6px;
     line-height: 120%;
     color: #000000;
+    
 }
 .O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-fundo{
     width: 1206px;
@@ -732,8 +733,12 @@ NOSSA POLÍTICA */
 height: 316px;
 border-radius: 30px;
 background-image: url('../img/45273_luzparatodos2.png');
+cursor: pointer;
+transition: 500ms;
 }
-
+.O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-img:hover{
+    transform: translate(+200px);
+}
 
 
 #O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-button{
@@ -776,6 +781,11 @@ background-image: url('../img/45273_luzparatodos2.png');
 height: 316px;
 border-radius: 30px;
 background-image: url('../img/338032.png');
+cursor: pointer;
+transition: 500ms;
+}
+.COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-img:hover{
+    transform: translate(-200px);
 }
 #COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-button{
     padding: 10px 15px;
@@ -816,6 +826,11 @@ background-image: url('../img/338032.png');
 height: 316px;
 border-radius: 30px;
 background-image: url('../img/light-bulb-lit-between-many-lightsIMGGRANDE.png');
+cursor: pointer;
+transition: 500ms;
+}
+.A-INVEÇÃO-DA-LÂMPADA-ELÉTRICA-INCANDESCENTE-img:hover{
+    transform: translate(+200px);
 }
 
 
@@ -857,9 +872,9 @@ background-image: url('../img/light-bulb-lit-between-many-lightsIMGGRANDE.png');
     margin-left: 65px;
     margin-right: 65px;
     margin-top: 141px;
-    margin-bottom: 722px;
     background: #00578A;
     border-radius: 30px;
+    margin-bottom: 233px;
     }
  #RELAÇÕES-COM-FORNECEDORES-texto{
     width: 1000px;
@@ -1364,7 +1379,7 @@ border-radius: 50px;
     height: 821px;
     margin-top: 184px;
     margin-left: 80px;
-    margin-bottom: 643px;
+    margin-bottom: 250px;
     background: #00578A;
     border-radius: 50px 0px;
 }
@@ -1414,7 +1429,7 @@ border-radius: 50px;
 
 .redes-de-distribuicao{
     width: 100%;
-    height: 295px;
+    height: 289px;
     opacity: 100%;
     background-image: url(../img/seguranca_de_trabalho.png);
 
@@ -1425,7 +1440,7 @@ border-radius: 50px;
     height: 645px;
     margin-top: 184px;
     margin-left: 80px;
-    margin-bottom: 292px;
+    margin-bottom: 142px;
     background: #00578A;
     border-radius: 50px 0px;
 }
@@ -1535,11 +1550,10 @@ border-radius: 50px;
 }
 .grupos-de-interesses-ultimaimg{
 
-
-    margin-left: 45px;
+    margin-left: 178px;
     margin-right: 70px;
     margin-bottom: 92px;
-    margin-top: 20px;
+    margin-top: 120px;
 }
 
 
@@ -2014,7 +2028,7 @@ border-radius: 50px;
     font-style: normal;
     font-weight: 900;
     font-size: 72px;
-    margin-top: 89px;
+    margin-top: 82px;
     margin-left: 72px;
     line-height: 86px;
     margin-bottom: 121px;
@@ -2221,6 +2235,14 @@ header{
   .icon-3{
     cursor: pointer;
     width: 30px;
+  }
+
+  #esqueci-senha{
+      text-decoration: none;
+      color: #000;
+  }
+  #esqueci-senha:hover{
+    color: #DFDD26;
   }
 
 
