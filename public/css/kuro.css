@@ -36,7 +36,8 @@
          url('../fontes/exo2-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    }  
+    }
+    
         /* For desktop: */
         .col-1 {width: 8.33%;}
         .col-2 {width: 16.66%;}
@@ -1690,6 +1691,9 @@ border-radius: 50px;
 }
 
 /* REDEFINIR SENHA*/
+
+
+
 #redefinir-senha-font{
     font-family: 'exo_2light';
 }
