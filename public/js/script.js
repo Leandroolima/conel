@@ -594,8 +594,11 @@ class Login {
             }
 
         }).then(result => {
+            console.log(result)
             return result.json();
         }).then(data => {
+            console.log("entrou")
+            console.log(data)
 
             login.email = data.email;
             login.password = data.password;
@@ -609,16 +612,26 @@ class Login {
         let token
         token = data.token
         console.log(token)
-        this.entrar(token)
+        localStorage.setItem("ourToken", data.token)
+        this.entrar(localStorage.getItem("ourToken"))
        
     }
     entrar(token){
+        console.log("entrei")
         fetch('/usuario/login', {
             headers:{
                 'Authorization': 'Bearer ' + token
             }
-        }) 
-        //window.history.back();
+        }).then(result => {
+            console.log(result)
+            return result.json();
+        }).then(data => {
+            console.log("entrou")
+            console.log(data)
+
+          
+
+        });
     }
 
     validaCampos(login) {
