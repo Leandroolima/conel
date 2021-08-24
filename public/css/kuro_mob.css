@@ -2091,7 +2091,7 @@ table {
     border-collapse: collapse;
     border: 2px solid #00578A;
     width: 95%;
-    margin-left: 70px;
+    margin-left: 82px;
 }
 
 table th{
@@ -2234,6 +2234,9 @@ header{
     width: 90px;
     z-index: -2;
     opacity: 1;
+}
+.doidera_maxima{
+    width: 306%;
 }
 #redes-sociais-hover{
     width: 90px;
