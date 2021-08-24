@@ -37,7 +37,82 @@
     font-weight: normal;
     font-style: normal;
     }
+
+
+
+
+
+
+    .slideInLeft {
+        -webkit-animation-name: slideInLeft;
+        animation-name: slideInLeft;
+        -webkit-animation-duration: 1s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        }
+        @-webkit-keyframes slideInLeft {
+        0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+        }
+        100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        }
+        }
+        @keyframes slideInLeft {
+        0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+        }
+        100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        }
+        } 
+
+
+
+
+        .slideInRight {
+            -webkit-animation-name: slideInRight;
+            animation-name: slideInRight;
+            -webkit-animation-duration: 1s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            }
+            @-webkit-keyframes slideInRight {
+            0% {
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            visibility: visible;
+            }
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            }
+            }
+            @keyframes slideInRight {
+            0% {
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            visibility: visible;
+            }
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            }
+            } 
+      
     
+
+
+
+            
         /* For desktop: */
         .col-1 {width: 8.33%;}
         .col-2 {width: 16.66%;}
@@ -737,7 +812,8 @@ cursor: pointer;
 transition: 500ms;
 }
 .O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-img:hover{
-    transform: translate(+200px);
+    transform: translate(550px);
+
 }
 
 
@@ -784,9 +860,15 @@ background-image: url('../img/338032.png');
 cursor: pointer;
 transition: 500ms;
 }
+
+
+
+/*
 .COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-img:hover{
     transform: translate(-200px);
-}
+}*/
+
+
 #COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-button{
     padding: 10px 15px;
     width: 106px;
@@ -829,9 +911,10 @@ background-image: url('../img/light-bulb-lit-between-many-lightsIMGGRANDE.png');
 cursor: pointer;
 transition: 500ms;
 }
+/*
 .A-INVEÇÃO-DA-LÂMPADA-ELÉTRICA-INCANDESCENTE-img:hover{
     transform: translate(+200px);
-}
+}*/
 
 
 

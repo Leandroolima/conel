@@ -36,7 +36,83 @@
          url('../fontes/exo2-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    }  
+    }
+
+
+
+
+
+
+    .slideInLeft {
+        -webkit-animation-name: slideInLeft;
+        animation-name: slideInLeft;
+        -webkit-animation-duration: 1s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        }
+        @-webkit-keyframes slideInLeft {
+        0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+        }
+        100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        }
+        }
+        @keyframes slideInLeft {
+        0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+        }
+        100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        }
+        } 
+
+
+
+
+        .slideInRight {
+            -webkit-animation-name: slideInRight;
+            animation-name: slideInRight;
+            -webkit-animation-duration: 1s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            }
+            @-webkit-keyframes slideInRight {
+            0% {
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            visibility: visible;
+            }
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            }
+            }
+            @keyframes slideInRight {
+            0% {
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            visibility: visible;
+            }
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            }
+            } 
+      
+    
+
+
+
+            
         /* For desktop: */
         .col-1 {width: 8.33%;}
         .col-2 {width: 16.66%;}
@@ -55,11 +131,12 @@
         .row-1 {width: 100%; display: flex;flex-direction: row;}
 
         .principal{
+            width: 1349px;
             margin: auto;
         }
         .inicio{
             background-color: #2093D6;
-            width: 1350px;
+            width: 1349px;
         }
         .home{
             list-style-type: none;
@@ -85,14 +162,16 @@
             text-decoration: none;
             color: #F2EDED;
         }
+        .home li a:hover{
+          color:   #DFDD26;
+        }
     .logo{
         margin-left: 65px;
         margin-top: 12px;
     }
     .barra{
-        background-color: #00578A ;
-        width: 1350px;
- 
+        background-color: #00578A ; 
+      width: 1349px;
     }
     .barra li{
         float: left;
@@ -109,6 +188,9 @@
     .barra li a{
         text-decoration: none;
         color: #F2EDED;
+    }
+    .barra li a:hover{
+        color:   #DFDD26;
     }
     .cor-menu{
         background-color: #2093D6
@@ -166,18 +248,21 @@
         background-image: url(../img/business-people-handshake-on-city1.png);
         background-repeat: no-repeat;
         background-position: center;
-        width: 360%;
     }
-    #texto{
+    .heading{
         font-family: 'exo_2light';
         font-weight: bold;
         font-size: 72px;
-        margin-top: 62px;
-        margin-left: 72px;
+        margin-top: 140px;
+        margin-left: 320px;
         line-height: 86px;
-        margin-bottom: 62px;
+        margin-bottom: -15px;
         color: #fff;
-        text-shadow: 1px 0 0 black, 1px 0 0 black, 0 1px 0 black, 0 1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;;
+        text-shadow: 1px 0 0 black, 1px 0 0 black, 0 1px 0 black, 0 1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    }
+    .heading-denuncia{
+        margin-left: 403px;
+        margin-bottom: 32px;
     }
     .laneInput{
         display: grid;
@@ -330,6 +415,9 @@
         cursor: pointer;
         margin-bottom: 92px;
     }
+    #botao-cadastro:hover{
+        background-color: #5a5904;
+    }
     .imgpri{
        width: 100%;
        height: 455px;
@@ -405,18 +493,14 @@
     width: 100%;
     margin-top: 105px;
     opacity: 100%;
-
     background-image: url('../img/power-lines-in-field-on-sunrise-background3.png');
     }
 .imgLaranja{
-
     background-image: url('../img/display-laranja1.png');
     width: 1350px;
-    height: 300px;
-    left: -5px;
+    height: 285px;
+    margin-left: -1px;
     top: 1275px;
-
-
 }
 .aconel{
     font-family: 'robotoregular';
@@ -433,18 +517,14 @@
     width: 100%;
     margin-top: 105px;
     opacity: 100%;
-
     background-image: url('../img/hands-joined-by-the-team1.png');
     }
 .imgverde{
-
     background-image: url('../img/display-verde1.png');
     width: 1350px;
-    height: 300px;
-    left: -5px;
+    height: 285px;
+    margin-left: -1px;
     top: 1275px;
-
-
 }
 .final{
     background-color: #2093D6;
@@ -457,7 +537,6 @@ top: 2771px;
 .cor-final{
     background-color: #2093D6;
     margin-top: 92px;
-    width: 1350px;
 }
 
 
@@ -672,6 +751,9 @@ NOSSA POLÍTICA */
     text-decoration: none;
     color: #F2EDED;
 }
+.side-bar li a:hover{
+    color: #DFDD26;
+}
 .side-bar{
     margin-top: 74px;
 }
@@ -711,10 +793,7 @@ NOSSA POLÍTICA */
     font-size: 27.6px;
     line-height: 120%;
     color: #000000;
-}
-
-.O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-img:hover{
-    animation: pulse 0.1s ease-in-out forwards;
+    
 }
 .O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-fundo{
     width: 1206px;
@@ -727,15 +806,17 @@ NOSSA POLÍTICA */
   
 }
 .O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-img{
-    cursor: pointer;
-    animation: pulse 2s ease-in-out infinite alternate;
-
     width: 665px;
 height: 316px;
 border-radius: 30px;
 background-image: url('../img/45273_luzparatodos2.png');
+cursor: pointer;
+transition: 500ms;
 }
+.O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-img:hover{
+    transform: translate(550px);
 
+}
 
 
 #O-QUE-É-O-PROGRAMA-LUZ-PARA-TODOS-button{
@@ -779,7 +860,17 @@ height: 316px;
 border-radius: 30px;
 background-image: url('../img/338032.png');
 cursor: pointer;
+transition: 500ms;
 }
+
+
+
+/*
+.COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-img:hover{
+    transform: translate(-200px);
+}*/
+
+
 #COMO-A-ENERGIA-ELÉTRICA-CHEGA-EM-NOSSAS-CASAS-button{
     padding: 10px 15px;
     width: 106px;
@@ -819,7 +910,13 @@ cursor: pointer;
 height: 316px;
 border-radius: 30px;
 background-image: url('../img/light-bulb-lit-between-many-lightsIMGGRANDE.png');
+cursor: pointer;
+transition: 500ms;
 }
+/*
+.A-INVEÇÃO-DA-LÂMPADA-ELÉTRICA-INCANDESCENTE-img:hover{
+    transform: translate(+200px);
+}*/
 
 
 
@@ -860,9 +957,9 @@ background-image: url('../img/light-bulb-lit-between-many-lightsIMGGRANDE.png');
     margin-left: 65px;
     margin-right: 65px;
     margin-top: 141px;
-    margin-bottom: 722px;
     background: #00578A;
     border-radius: 30px;
+    margin-bottom: 233px;
     }
  #RELAÇÕES-COM-FORNECEDORES-texto{
     width: 1000px;
@@ -1367,7 +1464,7 @@ border-radius: 50px;
     height: 821px;
     margin-top: 184px;
     margin-left: 80px;
-    margin-bottom: 643px;
+    margin-bottom: 250px;
     background: #00578A;
     border-radius: 50px 0px;
 }
@@ -1417,7 +1514,7 @@ border-radius: 50px;
 
 .redes-de-distribuicao{
     width: 100%;
-    height: 295px;
+    height: 289px;
     opacity: 100%;
     background-image: url(../img/seguranca_de_trabalho.png);
 
@@ -1428,7 +1525,7 @@ border-radius: 50px;
     height: 645px;
     margin-top: 184px;
     margin-left: 80px;
-    margin-bottom: 292px;
+    margin-bottom: 142px;
     background: #00578A;
     border-radius: 50px 0px;
 }
@@ -1538,18 +1635,18 @@ border-radius: 50px;
 }
 .grupos-de-interesses-ultimaimg{
 
-
-    margin-left: 45px;
+    margin-left: 178px;
     margin-right: 70px;
     margin-bottom: 92px;
-    margin-top: 20px;
+    margin-top: 120px;
 }
 
 
+
+
+
+
 /* PROGRAMA LUZ PARA TODOS*/
-
-
-
 .programa-luz-para-todos-2-img{
 
     width: 100%;
@@ -1638,9 +1735,9 @@ border-radius: 50px;
 }
 
 
-
-
 /* ADM SENHA*/
+
+
 
 
 #logo {
@@ -1692,9 +1789,6 @@ border-radius: 50px;
     height: 419px;
 }
 
-
-
-
 /* REDEFINIR SENHA*/
 
 
@@ -1728,8 +1822,6 @@ border-radius: 50px;
     margin-top: 100px;
     margin-bottom: 150px;
 }
-
-
 
 
 
@@ -1797,13 +1889,11 @@ border-radius: 50px;
 #cor-final{
     background-color: #2093D6;
     margin-top: 100px;
- 
 }
 .foto-de-entrada{
     background-image: url(../img/businessman-hand-holding-smart-phone-with-icon-mobile-phone-mail-telephone-and-address-customer-service-call-center-contact-us-concept1.png);
     background-repeat: no-repeat;
     background-position: center;
-
 }
 #texto-2{
     font-family: 'exo_2light';
@@ -1861,7 +1951,6 @@ border-radius: 50px;
     background-image: url(../img/close-up-photography-of-light-bulb1.png);
     background-repeat: no-repeat;
     background-position: center;
-    width: 360%;
 }
 .barrinha{
     background: #006EAF;
@@ -1913,11 +2002,13 @@ border-radius: 50px;
     font-size: 24px;
     line-height: 28px;
 }
+#botao-enviar-trabalhe:hover{
+    background-color: #6e6d04;
+}
 .foto-de-entrada-denuncia{
     background-image: url(../img/business-people-fill-resume-application-information-desk-presents-ability-company-agree-with-position-job1.png);
     background-repeat: no-repeat;
     background-position: center;
-    width: 360%;
 }
 .barrinha-verde{
     background: #DFDD26;
@@ -1969,7 +2060,7 @@ border-radius: 50px;
     height: 293px;
     background: #DFDD26;
     border-radius: 30px;
-    margin-left: -252px;
+    margin-left: -224px;
     margin-top: 312px;
     z-index: -1;
 }
@@ -2016,14 +2107,13 @@ border-radius: 50px;
     background-image: url(../img/capaa1.png);
     background-repeat: no-repeat;
     background-position: center;
-
 }
 .texto-3{
     font-family: 'exo_2light';
     font-style: normal;
     font-weight: 900;
     font-size: 72px;
-    margin-top: 89px;
+    margin-top: 82px;
     margin-left: 72px;
     line-height: 86px;
     margin-bottom: 121px;
@@ -2034,6 +2124,7 @@ border-radius: 50px;
     border-radius: 50px;
     width: 1280px;
     height: 1628px;
+    margin-left: 33px;
 }
 .texto-bloco{
     font-family: 'exo_2light';
@@ -2079,10 +2170,6 @@ border-radius: 50px;
     display: inline-block;
 }
 
-.coluna{
-    display: grid;
-}
-
 .content{
     margin-top: 1px;
 }
@@ -2113,23 +2200,9 @@ header{
     color: #fff;
     text-align: center;
     font-family: 'exo_2light';
-    font-size: 10px;
 }
-.heading{
-    font-family: 'exo_2light';
-    font-weight: bold;
-    font-size: 72px;
-    margin-top: 140px;
-    margin-left: 320px;
-    line-height: 86px;
-    margin-bottom: -15px;
-    color: #fff;
-    text-shadow: 1px 0 0 black, 1px 0 0 black, 0 1px 0 black, 0 1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
-}
-
-.heading-denuncia{
-    margin-left: 236px;
-    margin-bottom: 32px;
+.header-cadastro{
+    background-color: #fff;
 }
 
 .center{
@@ -2171,13 +2244,14 @@ header{
     color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 79%;
+    width: 100%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 11px;
+    font-size: 15px;
     transition: 0.4s;
-    margin-left: 77px;
+    width: 95%;
+    margin-left: 76px;
   }
   
   .active, .accordion:hover {
@@ -2190,63 +2264,71 @@ header{
     background-color: white;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    width: 100%;
   }
   #data_denuncia{
       display: none;
   }
-  #data_denun{
-      font-family:  'exo_2light';
-      margin-left: 5px;
-      font-size: 10px;
-  }
   #data_curriculo{
     display: none;
   }
+  #data_denun{
+      font-family:  'exo_2light';
+      margin-left: 5px;
+  }
+  #descricao_denuncia{
+    font-family:  'exo_2light';
+    margin-left: 67px;
+  }
   #texto-denuncia-2{
     font-family:  'exo_2light';
-    margin-left: 6px;
+    margin-left: 158px;
   }
   #denuncia_numero{
     font-family:  'exo_2light';
-    margin-left: 2px;
+    margin-left: 16px;
   }
-  #descricao_denuncia{
-    margin-left: 61px;
-    font-size: 10px;
-    font-family:  'exo_2light';
-    width: 115%;
+  #redes-sociais{
+      width: 90px;
+      z-index: -2;
+      opacity: 1;
+  }
+  #redes-sociais-hover{
+      width: 90px;
+      margin-left: -90px;
+      z-index: 2;
+      cursor: pointer;
+  }
+  #redes-sociais-hover:hover{
+      opacity: 0;
+  }
+  #redes-sociais:hover{
+      opacity: 0;
   }
   .icon-1{
-    width: 28px;
+    width: 40px;
     cursor: pointer;
-    margin-left:  100px;
+    margin-left: 556px;
 
   }
   .icon-2{
-    width: 23px;
+    width: 40px;
     cursor: pointer;
     margin-left: 5px;
     margin-top: 10px;
     margin-bottom: 5px;
   }
-  #redes-sociais{
-    width: 90px;
-    z-index: -2;
-    opacity: 1;
-}
-#redes-sociais-hover{
-    width: 90px;
-    margin-left: -90px;
-    z-index: 2;
+  .icon-3{
     cursor: pointer;
-}
-#redes-sociais-hover:hover{
-    opacity: 0;
-}
-#redes-sociais:hover{
-    opacity: 0;
-}
+    width: 30px;
+  }
+
+  #esqueci-senha{
+      text-decoration: none;
+      color: #000;
+  }
+  #esqueci-senha:hover{
+    color: #DFDD26;
+  }
 
 
 .slideOutUp:hover {
@@ -2278,5 +2360,7 @@ header{
         -webkit-transform: translateY(-20%);
         transform: translateY(-20%);
         }
+        
     } 
+
 }
