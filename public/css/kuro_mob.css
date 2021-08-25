@@ -248,6 +248,7 @@
         background-image: url(../img/business-people-handshake-on-city1.png);
         background-repeat: no-repeat;
         background-position: center;
+        width: 360%;
     }
     .heading{
         font-family: 'exo_2light';
@@ -537,6 +538,7 @@ top: 2771px;
 .cor-final{
     background-color: #2093D6;
     margin-top: 92px;
+    width: 1350px;
 }
 
 
@@ -1951,6 +1953,7 @@ border-radius: 50px;
     background-image: url(../img/close-up-photography-of-light-bulb1.png);
     background-repeat: no-repeat;
     background-position: center;
+    width: 360%;
 }
 .barrinha{
     background: #006EAF;
@@ -2009,6 +2012,7 @@ border-radius: 50px;
     background-image: url(../img/business-people-fill-resume-application-information-desk-presents-ability-company-agree-with-position-job1.png);
     background-repeat: no-repeat;
     background-position: center;
+    width: 360%;
 }
 .barrinha-verde{
     background: #DFDD26;
@@ -2107,6 +2111,7 @@ border-radius: 50px;
     background-image: url(../img/capaa1.png);
     background-repeat: no-repeat;
     background-position: center;
+
 }
 .texto-3{
     font-family: 'exo_2light';
@@ -2329,13 +2334,6 @@ header{
 .doidera_maxima{
     width: 306%;
 }
-#redes-sociais-hover{
-    width: 90px;
-    margin-left: -90px;
-    z-index: 2;
-    cursor: pointer;
-    width: 30px;
-  }
 
   #esqueci-senha{
       text-decoration: none;

@@ -100,7 +100,7 @@ app.get('/adm/curriculo',  (req, res) => {
     res.sendFile(__dirname + '/public/paginas/adm_trabalhe.html')
 })
 
-app.get('/dashboard',login.obrigatorio,(req, res) => {
+app.get('/dashboard',(req, res) => {
     res.sendFile(__dirname + '/public/paginas/dashboard_adm.html')
 })
 

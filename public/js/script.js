@@ -594,6 +594,7 @@ class Login {
             }
 
         }).then(result => {
+            console.log('aqui?')
             console.log(result)
             return result.json();
         }).then(data => {
@@ -604,6 +605,7 @@ class Login {
             login.password = data.password;
 
             this.arrayLogin.push(login);
+            console.log('salvar token')
             this.salvarToken(data);
 
         });
@@ -613,6 +615,7 @@ class Login {
         token = data.token
         console.log(token)
         localStorage.setItem("ourToken", data.token)
+        console.log('entratr token')
         this.entrar(localStorage.getItem("ourToken"))
        
     }
@@ -623,11 +626,14 @@ class Login {
                 'Authorization': 'Bearer ' + token
             }
         }).then(result => {
+
             console.log(result)
             return result.json();
         }).then(data => {
             console.log("entrou")
             console.log(data)
+
+           location.assign('/dashboard')
 
           
 
@@ -749,26 +755,61 @@ function checarEmail() {
     }
 }
 
-let sidebar = document.querySelector(".sidebar");
-let closeBtn = document.querySelector("#btn");
-let searchBtn = document.querySelector(".bx-search");
+function loads(){
+    entrarLoad()
+    loadDashboard()
 
-closeBtn.addEventListener("click", ()=>{
-  sidebar.classList.toggle("open");
-  menuBtnChange();
-});
-
-searchBtn.addEventListener("click", ()=>{ 
-  sidebar.classList.toggle("open");
-  menuBtnChange(); 
-});
-
-
-function menuBtnChange() {
- if(sidebar.classList.contains("open")){
-   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
- }else {
-   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
- }
+}
+function loadDashboard(){
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+    
+    closeBtn.addEventListener("click", ()=>{
+      sidebar.classList.toggle("open");
+      menuBtnChange();
+    });
+    
+    searchBtn.addEventListener("click", ()=>{ 
+      sidebar.classList.toggle("open");
+      menuBtnChange(); 
+    });
+    
+    
+    function menuBtnChange() {
+     if(sidebar.classList.contains("open")){
+       closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+     }else {
+       closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+     }
+    }
 }
 
+async function entrarLoad(){
+    console.log("entrei")
+    fetch('/usuario/login', {
+        headers:{
+            'Authorization': 'Bearer ' + localStorage.getItem("ourToken")
+        }
+    }).then(result => {
+
+        console.log(result)
+        if(result.ok){
+            return result.json();
+
+        }else{
+            location.assign('/login')
+
+        }
+       
+    }).then(data => {
+        console.log("entrou")
+        console.log(data)
+
+      // 
+
+      
+
+    })
+
+}
