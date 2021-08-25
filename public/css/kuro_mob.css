@@ -1,4 +1,4 @@
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 440px) {
     *{
         margin: 0;
     }
@@ -2176,14 +2176,14 @@ border-radius: 50px;
 }
 
 .content{
-    margin-top: 1px;
+    margin-top: 7px;
 }
 
 table {
     border-collapse: collapse;
     border: 2px solid #00578A;
     width: 95%;
-    margin-left: 82px;
+    margin-left: 94px;
 }
 
 table th{
@@ -2332,7 +2332,7 @@ header{
     opacity: 1;
 }
 .doidera_maxima{
-    width: 306%;
+    width: 386%;
 }
 
   #esqueci-senha{

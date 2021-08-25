@@ -12,7 +12,7 @@ class Cadastro {
                 this.adicionar(cadastro)
             }
 
-            alert('Cadastro realizado')
+            alert('Cadastro Realizado')
             document.location.reload(true);
         }
     }
@@ -756,11 +756,11 @@ function checarEmail() {
 }
 
 function loads(){
-    entrarLoad()
-    loadDashboard()
+    this.loadDashboard()
 
 }
 function loadDashboard(){
+    console.log("dashboard")
     let sidebar = document.querySelector(".sidebar");
     let closeBtn = document.querySelector("#btn");
     let searchBtn = document.querySelector(".bx-search");
@@ -785,7 +785,7 @@ function loadDashboard(){
     }
 }
 
-async function entrarLoad(){
+/*async function entrarLoad(){
     console.log("entrei")
     fetch('/usuario/login', {
         headers:{
@@ -812,4 +812,4 @@ async function entrarLoad(){
 
     })
 
-}
+}*/

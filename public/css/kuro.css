@@ -47,7 +47,7 @@
         -webkit-animation-name: slideInLeft;
         animation-name: slideInLeft;
         -webkit-animation-duration: 1s;
-        animation-duration: 2s;
+        animation-duration: 7.5s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
         }
@@ -81,7 +81,7 @@
             -webkit-animation-name: slideInRight;
             animation-name: slideInRight;
             -webkit-animation-duration: 1s;
-            animation-duration: 2s;
+            animation-duration: 7.5s;
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
             }
