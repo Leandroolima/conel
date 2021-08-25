@@ -2205,6 +2205,7 @@ header{
     color: #fff;
     text-align: center;
     font-family: 'exo_2light';
+    font-size: 10px;
 }
 .header-cadastro{
     background-color: #fff;
@@ -2248,14 +2249,13 @@ header{
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
-    width: 100%;
+    padding: 15px;
     border: none;
     text-align: left;
     outline: none;
     font-size: 15px;
     transition: 0.4s;
-    width: 95%;
+    width: 79%;
     margin-left: 76px;
   }
   
@@ -2277,20 +2277,22 @@ header{
     display: none;
   }
   #data_denun{
-      font-family:  'exo_2light';
-      margin-left: 5px;
+    font-family: 'exo_2light';
+    margin-left: 0px;
+    font-size: 10px;
   }
   #descricao_denuncia{
     font-family:  'exo_2light';
     margin-left: 67px;
+    width: 200px;
   }
   #texto-denuncia-2{
-    font-family:  'exo_2light';
-    margin-left: 158px;
+    font-family: 'exo_2light';
+    font-size: 13px;
   }
   #denuncia_numero{
-    font-family:  'exo_2light';
-    margin-left: 16px;
+    font-family: 'exo_2light';
+    margin-left: 0px;
   }
   #redes-sociais{
       width: 90px;
@@ -2310,17 +2312,16 @@ header{
       opacity: 0;
   }
   .icon-1{
-    width: 40px;
     cursor: pointer;
-    margin-left: 556px;
-
+    margin-left: 101px;
+    width: 27px;
   }
   .icon-2{
-    width: 40px;
     cursor: pointer;
     margin-left: 5px;
     margin-top: 10px;
     margin-bottom: 5px;
+    width: 24px;
   }
   .icon-3{
     cursor: pointer;
@@ -2376,4 +2377,8 @@ header{
         
     } 
 
+}
+
+.princi{
+    margin: auto;
 }
