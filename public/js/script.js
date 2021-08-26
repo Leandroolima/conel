@@ -579,7 +579,7 @@ function loginho() {
             return result.json()
         } else {
             localStorage.setItem("ourToken", null)
-            alert("Senha errada")
+            alert("Email ou senha incorreto")
         }
     }).then(data => {
       
