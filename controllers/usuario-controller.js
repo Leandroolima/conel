@@ -42,11 +42,6 @@ exports.postLogin = async (req, res, next) => {
         if (results.length < 1) {
             return res.status(401).send({ message: 'Falha na autenticação' })
         }
-
-        console.log('aqui2?')
-
-        console.log(results[0])
-        console.log('aqui3?')
         if (await bcrypt.compareSync(req.body.password, results[0].password)) {
             
             const token = jwt.sign({
@@ -66,7 +61,6 @@ exports.postLogin = async (req, res, next) => {
         return res.status(401).send({ message: 'Falha na autenticação' })
 
     } catch (error) {
-        console.log(error)
         return res.status(500).send({ message: 'Falha na autenticação' });
         
     }
@@ -79,13 +73,12 @@ exports.getLogin = async (req, res, next) => {
         const token = req.headers.authorization.split(' ')[1];
         const decode = jwt.verify(token, process.env.JWT_KEY);
         req.usuario = decode;
-       // console.log("passou por aqui")
        return res.status(301).send({ message: 'autho' });
 
         
     } catch (error) {
-        //console.log(error)
         return res.status(401).send({ message: 'Falha na autenticação' });
         
     }
 };
+

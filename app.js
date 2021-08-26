@@ -1,30 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
-const login = require('./middleware/login');
-
-const fs = require('fs');
-const dir = process.env.PWD+"/uploads";
-/*
-//Verifica se não existe
-if (!fs.existsSync(dir)){
-    console.log('entrou')
-    //Efetua a criação do diretório
-    fs.mkdir(dir, (err) => {
-       
-        if (err) {
-            console.log(err)
-            console.log("Deu ruim...");
-            console.log(dir)
-            return
-        }
-
-        console.log("Diretório criado! =)")
-    });
-}else{
-    console.log('existe')
-}
-*/
 
 const rotaCadastros = require('./routes/cadastros')
 const rotaDenuncia = require('./routes/denuncia')
@@ -130,5 +106,3 @@ app.use('/trabalhe', rotaTrabalhe);
 app.use('/usuario', rotaUsuario);
 
 module.exports = app
-
-//ok
