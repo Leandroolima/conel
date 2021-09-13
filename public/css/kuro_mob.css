@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @media only screen and (max-width: 414px) {
+=======
+@media only screen and (max-width: 440px) {
+>>>>>>> 52d8bff024c151b7bebf9789fd0224878e6aa466
     *{
         margin: 0;
     }
@@ -248,6 +252,7 @@
         background-image: url(../img/business-people-handshake-on-city1.png);
         background-repeat: no-repeat;
         background-position: center;
+        width: 360%;
     }
     .heading{
         font-family: 'exo_2light';
@@ -537,6 +542,7 @@ top: 2771px;
 .cor-final{
     background-color: #2093D6;
     margin-top: 92px;
+    width: 1350px;
 }
 
 
@@ -1894,6 +1900,7 @@ border-radius: 50px;
     background-image: url(../img/businessman-hand-holding-smart-phone-with-icon-mobile-phone-mail-telephone-and-address-customer-service-call-center-contact-us-concept1.png);
     background-repeat: no-repeat;
     background-position: center;
+    width: 360%;
 }
 #texto-2{
     font-family: 'exo_2light';
@@ -1951,6 +1958,7 @@ border-radius: 50px;
     background-image: url(../img/close-up-photography-of-light-bulb1.png);
     background-repeat: no-repeat;
     background-position: center;
+    width: 360%;
 }
 .barrinha{
     background: #006EAF;
@@ -2009,6 +2017,7 @@ border-radius: 50px;
     background-image: url(../img/business-people-fill-resume-application-information-desk-presents-ability-company-agree-with-position-job1.png);
     background-repeat: no-repeat;
     background-position: center;
+    width: 360%;
 }
 .barrinha-verde{
     background: #DFDD26;
@@ -2107,6 +2116,7 @@ border-radius: 50px;
     background-image: url(../img/capaa1.png);
     background-repeat: no-repeat;
     background-position: center;
+
 }
 .texto-3{
     font-family: 'exo_2light';
@@ -2171,14 +2181,14 @@ border-radius: 50px;
 }
 
 .content{
-    margin-top: 1px;
+    margin-top: 7px;
 }
 
 table {
     border-collapse: collapse;
     border: 2px solid #00578A;
     width: 95%;
-    margin-left: 82px;
+    margin-left: 94px;
 }
 
 table th{
@@ -2200,6 +2210,7 @@ header{
     color: #fff;
     text-align: center;
     font-family: 'exo_2light';
+    font-size: 10px;
 }
 .header-cadastro{
     background-color: #fff;
@@ -2243,14 +2254,13 @@ header{
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
-    width: 100%;
+    padding: 15px;
     border: none;
     text-align: left;
     outline: none;
     font-size: 15px;
     transition: 0.4s;
-    width: 95%;
+    width: 79%;
     margin-left: 76px;
   }
   
@@ -2272,20 +2282,22 @@ header{
     display: none;
   }
   #data_denun{
-      font-family:  'exo_2light';
-      margin-left: 5px;
+    font-family: 'exo_2light';
+    margin-left: 0px;
+    font-size: 10px;
   }
   #descricao_denuncia{
     font-family:  'exo_2light';
     margin-left: 67px;
+    width: 200px;
   }
   #texto-denuncia-2{
-    font-family:  'exo_2light';
-    margin-left: 158px;
+    font-family: 'exo_2light';
+    font-size: 13px;
   }
   #denuncia_numero{
-    font-family:  'exo_2light';
-    margin-left: 16px;
+    font-family: 'exo_2light';
+    margin-left: 0px;
   }
   #redes-sociais{
       width: 90px;
@@ -2305,17 +2317,16 @@ header{
       opacity: 0;
   }
   .icon-1{
-    width: 40px;
     cursor: pointer;
-    margin-left: 556px;
-
+    margin-left: 101px;
+    width: 27px;
   }
   .icon-2{
-    width: 40px;
     cursor: pointer;
     margin-left: 5px;
     margin-top: 10px;
     margin-bottom: 5px;
+    width: 24px;
   }
   .icon-3{
     cursor: pointer;
@@ -2327,15 +2338,8 @@ header{
     opacity: 1;
 }
 .doidera_maxima{
-    width: 306%;
+    width: 386%;
 }
-#redes-sociais-hover{
-    width: 90px;
-    margin-left: -90px;
-    z-index: 2;
-    cursor: pointer;
-    width: 30px;
-  }
 
   #esqueci-senha{
       text-decoration: none;
@@ -2378,4 +2382,8 @@ header{
         
     } 
 
+}
+
+.princi{
+    margin: auto;
 }

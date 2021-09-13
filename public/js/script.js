@@ -12,7 +12,7 @@ class Cadastro {
                 this.adicionar(cadastro)
             }
 
-            alert('Cadastro realizado')
+            alert('Cadastro Realizado')
             document.location.reload(true);
         }
     }
@@ -192,9 +192,7 @@ class Cadastro {
                 return result.json()
             }).then(data => {
                 for (let i = 0; i < this.arrayCadastros.length; i++) {
-                    console.log("passou aqui")
                     if (this.arrayCadastros[i].id_cadastrado == id_cadastrado) {
-                        console.log(data.cadastrado.arquivo)
                         window.location.assign(data.cadastrado.arquivo)
 
                     }
@@ -203,7 +201,7 @@ class Cadastro {
 
     }
     async excluir(id_cadastrado){
-        if (confirm('Deseja realmente deletar a denuncia N ' + id_cadastrado)) {
+        if (confirm('Deseja realmente deletar o Cadastro N ' + id_cadastrado)) {
             fetch('/cadastros/' + id_cadastrado, {
                 method: 'DELETE'
             }).then(result => {
@@ -541,7 +539,7 @@ class Trabalhe {
 
     }
     async excluir(id_trabalhe){
-        if (confirm('Deseja realmente deletar o curriculo N ' + id_trabalhe)) {
+        if (confirm('Deseja realmente deletar o Curriculo N ' + id_trabalhe)) {
             fetch('/trabalhe/' + id_trabalhe, {
                 method: 'DELETE'
             }).then(result => {
@@ -561,99 +559,55 @@ class Trabalhe {
 
 var trabalhe = new Trabalhe
 
+function loginho() {
 
-class Login {
-    constructor() {
-        this.arrayLogin = [];
-        this.editId = null
-    }
-    salvar() {
-        let login = this.lerDados();
+    let user = {
+        email: document.getElementById('eemail').value,
+        password:document.getElementById('password').value
+    };
 
-        if (this.validaCampos(login)) {
-            if (this.editId == null) {
-                this.adicionar(login)
-            }
+    let response =  fetch('/usuario/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            'Authorization': `${localStorage.getItem("ourToken")}`
+
+        },
+        body: JSON.stringify(user)
+    }).then(result => {      
+        if (result.ok) {   
+            return result.json()
+        } else {
+            localStorage.setItem("ourToken", null)
+            alert("Email ou senha incorreto")
         }
-    }
-
-    lerDados() {
-        let login = {}
-
-        login.id = 0;
-        login.email = document.getElementById('eemail').value;
-        login.password = document.getElementById('password').value
-        return login;
-    }
-    async adicionar(login) {
-        fetch('/usuario/login', {
-            method: 'POST',
-            body: JSON.stringify(login),
-            headers:{
-                "Content-type": "application/json; charset=utf-8"
-            }
-
-        }).then(result => {
-            console.log(result)
-            return result.json();
-        }).then(data => {
-            console.log("entrou")
-            console.log(data)
-
-            login.email = data.email;
-            login.password = data.password;
-
-            this.arrayLogin.push(login);
-            this.salvarToken(data);
-
-        });
-    }
-    salvarToken(data){
-        let token
-        token = data.token
-        console.log(token)
+    }).then(data => {
+      
         localStorage.setItem("ourToken", data.token)
-        this.entrar(localStorage.getItem("ourToken"))
-       
-    }
-    entrar(token){
-        console.log("entrei")
-        fetch('/usuario/login', {
-            headers:{
-                'Authorization': 'Bearer ' + token
-            }
-        }).then(result => {
-            console.log(result)
-            return result.json();
-        }).then(data => {
-            console.log("entrou")
-            console.log(data)
 
-          
 
-        });
-    }
+        location.assign('/dashboard')
+    });
 
-    validaCampos(login) {
-        let msg = '';
-
-        if (login.email == "") {
-            msg += '- Informe o nome do Produto'
-        }
-        if (login.password == "") {
-            msg += '- Informe o preco do Produto'
-        }
-        if (msg != '') {
-             t(msg);
-            return false
-        }
-        return true;
-
-    }
+    
 }
 
-var login = new Login
+async function validacao_load() {
 
+
+    fetch('usuario/login/auto', {
+        headers: {
+            'Authorization': `${localStorage.getItem("ourToken")}`
+        }
+    }).then(result => {
+        if (result.ok) {
+            return result.json()
+        } else {
+           location.assign('/login')
+        }
+    });
+
+}
 function fMasc(objeto, mascara) {
     obj = objeto
     masc = mascara
@@ -749,26 +703,33 @@ function checarEmail() {
     }
 }
 
-let sidebar = document.querySelector(".sidebar");
-let closeBtn = document.querySelector("#btn");
-let searchBtn = document.querySelector(".bx-search");
+function loads(){
+    validacao_load();
+    this.loadDashboard()
+    
 
-closeBtn.addEventListener("click", ()=>{
-  sidebar.classList.toggle("open");
-  menuBtnChange();
-});
-
-searchBtn.addEventListener("click", ()=>{ 
-  sidebar.classList.toggle("open");
-  menuBtnChange(); 
-});
-
-
-function menuBtnChange() {
- if(sidebar.classList.contains("open")){
-   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
- }else {
-   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
- }
 }
-
+function loadDashboard(){
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+    
+    closeBtn.addEventListener("click", ()=>{
+      sidebar.classList.toggle("open");
+      menuBtnChange();
+    });
+    
+    searchBtn.addEventListener("click", ()=>{ 
+      sidebar.classList.toggle("open");
+      menuBtnChange(); 
+    });
+    
+    
+    function menuBtnChange() {
+     if(sidebar.classList.contains("open")){
+       closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+     }else {
+       closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+     }
+    }
+}
