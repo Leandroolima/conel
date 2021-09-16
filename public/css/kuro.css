@@ -2147,26 +2147,29 @@ border-radius: 50px;
 .apagar{
     opacity: 0;
 }
-.bloco-2{
+.bloco-2 {
     width: 1297px;
-    height: 1689px;
+    height: 1500px;
     background: #00578A;
     border-radius: 50px;
     margin-left: 30px;
     margin-top: 135px;
 }
-.texto-bloco-2{
+
+.texto-bloco-2 {
     font-family: 'exo_2light';
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
     line-height: 42px;
+    text-align: justify;
     color: #fff;
-    width: 1146px;
-    margin-left: 55px;
+    width: 1241px;
+    margin-left: 20px;
     margin-top: 50px;
     display: inline-block;
 }
+
 
 .content{
     margin-top: 1px;
