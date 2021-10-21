@@ -7,7 +7,7 @@ exports.postTrabalhe = async (req, res, next) => {
         const result = await mysql.execute(query, [
             req.body.conte_mais,
             req.body.data_curriculo,
-            req.file.path.replace("public" ,"")
+            req.file.path.replace("public" ," ")
         ]);
         const response = {
             mensagem: 'Formulario cadastrado com sucesso',

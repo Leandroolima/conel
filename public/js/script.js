@@ -531,7 +531,7 @@ class Trabalhe {
             }).then(data => {
                 for (let i = 0; i < this.arrayTrabalhe.length; i++) {
                     if (this.arrayTrabalhe[i].id_trabalhe == id_trabalhe) {
-                        window.location.assign("trabalhe/" + data.cadastrado.arquivo)
+                        window.location.assign(data.cadastrado.arquivo)
 
                     }
                 }

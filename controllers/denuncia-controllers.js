@@ -7,7 +7,7 @@ exports.postDenuncia = async (req, res, next) => {
         const result = await mysql.execute(query, [
             req.body.canal_denuncia,
             req.body.data_denuncia, 
-            req.file.path.replace("public", "")
+            req.file.path.replace("public", " ")
         ]);
         const response = {
             mensagem: 'denuncia cadastrada com sucesso',
