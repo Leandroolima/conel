@@ -171,6 +171,61 @@
     .barra{
         background-color: #00578A ; 
     }
+    .vagas_abertas{
+        margin-top: 3rem;
+        background-color: #0065a2;
+    }
+    .bordar{
+        text-align: center;
+        border-radius: 6rem;
+        background-color: #f9ec00;
+        color: #0065a2;
+        font-family: 'robotoregular';
+        font-weight: 700;
+        width: 21rem;
+        margin-left: 33rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+    .border_white{
+        text-align: center;
+        border-radius: 6rem;
+        background-color: #fff;
+        color: #0065a2;
+        font-family: 'robotoregular';
+        font-weight: 700;
+        width: 32rem;
+        margin-left: 28rem;
+        margin-bottom: 2rem;
+    }
+    .text_trabalho{
+        text-align: left;
+        color: #fff;
+        font-family: 'robotoregular';
+        font-weight: 700;
+        width: 64rem;
+        margin-left: 8rem;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        line-height: 1.9rem;
+        letter-spacing: 0.06rem;
+    }
+    .list_trabalhe{
+        text-align: left;
+        color: #fff;
+        font-family: 'robotoregular';
+        font-weight: 700;
+        width: 32rem;
+        margin-left: 7rem;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        line-height: 1.9rem;
+        letter-spacing: 0.04rem;
+        list-style-type: disc;
+    }
+    li::marker{
+        color: #f9ec00;
+    }
     .barra li{
         float: left;
         font-family: 'robotoregular';

@@ -40,6 +40,7 @@ exports.postLogin = async (req, res, next) => {
         const results = await mysql.execute(query, [req.body.email]);
 
         if (results.length < 1) {
+            console.log('here')
             return res.status(401).send({ message: 'Falha na autenticação' })
         }
         if (await bcrypt.compareSync(req.body.password, results[0].password)) {
@@ -58,7 +59,7 @@ exports.postLogin = async (req, res, next) => {
                 token: token
             });
         }
-        return res.status(401).send({ message: 'Falha na autenticação' })
+        return res.status(401).send({ message: 'Falha na autenticação' }) 
 
     } catch (error) {
         return res.status(500).send({ message: 'Falha na autenticação' });

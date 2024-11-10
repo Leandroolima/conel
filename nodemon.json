@@ -1,7 +1,7 @@
 {
     "env":{ 
-        "MYSQL_USER": "conel",
-        "MYSQL_PASSWORD": "Conel@2021",
+        "MYSQL_USER": "root",
+        "MYSQL_PASSWORD": "kuroz",
         "MYSQL_DATABASE": "conel",
         "MYSQL_HOST": "127.0.0.1",
         "MYSQL_PORT": 3306,
